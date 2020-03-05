@@ -13,5 +13,6 @@ def people():
     return render_template('people.html')
 
 def new_friend(sid):
-    print('new friend', sid)
-    emit('new_friend_reg', {"peer_id": sid}, broadcast=True)
+    print('new friend', sid) # This is now firing
+    emit('new_friend_reg', {"peer_id": sid}, namespace="/people", broadcast=True, include_self=True)
+    SCKT.emit('new_friend_reg', {"peer_id": sid}, namespace="/people")

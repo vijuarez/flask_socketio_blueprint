@@ -15,11 +15,11 @@ def create_app(debug=False) -> Flask:
 
     config_all(app, debug)
 
+    SCKT.init_app(app)
+
+
     from .blueprints import people
     app.register_blueprint(people.PP)
     SCKT.on_event('new_friend', people.new_friend, namespace="/people")
-
-    SCKT.init_app(app)
-
 
     return app
