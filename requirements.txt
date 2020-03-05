@@ -1,0 +1,10 @@
+Flask_SocketIO==4.2.1
+gevent==1.4.0
+Flask==1.1.1
+flask-redis==0.4.0
+redis==3.4.1
+gevent-websocket==0.10.1
+gunicorn==20.0.0
+requests==2.22.0
+python-dotenv==0.12.0
+python_engineio==3.11.2

@@ -1,0 +1,9 @@
+<!doctype html>
+<title>people</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/peerjs@0.3.20/dist/peer.min.js"></script>
+<script src="{{ url_for('people.static', filename='painter.js')}}"></script>
+
+<body onLoad="draw()">
+    <h1>Open the console to see what's going on!</h1>
+</body>
