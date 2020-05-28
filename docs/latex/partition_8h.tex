@@ -1,0 +1,75 @@
+\hypertarget{partition_8h}{}\doxysection{Referencia del Archivo src/file\+System/partition.h}
+\label{partition_8h}\index{src/fileSystem/partition.h@{src/fileSystem/partition.h}}
+
+
+Declaración de los métodos para particiones del C\+R\+FS.  
+
+
+{\ttfamily \#include \char`\"{}bitmap.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}directory.\+h\char`\"{}}\newline
+\doxysubsection*{Estructuras de datos}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpartition}{partition}}
+\begin{DoxyCompactList}\small\item\em Representación de una partición. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{partition_8h_a388c9aff8515ce94bbd8d6852bc52662}\label{partition_8h_a388c9aff8515ce94bbd8d6852bc52662}} 
+typedef struct \mbox{\hyperlink{structpartition}{partition}} \mbox{\hyperlink{partition_8h_a388c9aff8515ce94bbd8d6852bc52662}{Partition}}
+\begin{DoxyCompactList}\small\item\em Representación de una partición. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{partition_8h_a388c9aff8515ce94bbd8d6852bc52662}{Partition}} $\ast$ \mbox{\hyperlink{partition_8h_abc20d61c98c141252fe0456acdddb4a7}{partition\+\_\+init}} (int uid)
+\begin{DoxyCompactList}\small\item\em Función para instanciar una partición. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{partition_8h_a7c478c925ca4ac4a5904be73ac2ace38}{free\+\_\+partition}} (\mbox{\hyperlink{partition_8h_a388c9aff8515ce94bbd8d6852bc52662}{Partition}} $\ast$\mbox{\hyperlink{structpartition}{partition}})
+\begin{DoxyCompactList}\small\item\em Función para liberar la memoria usada por un disco. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Declaración de los métodos para particiones del C\+R\+FS. 
+
+\begin{DoxyDate}{Fecha}
+27 May 2020 Se incluyen los métodos para manejar bloques índice en el C\+R\+FS, las estructuras de datos encargadas de representar a los archivos de forma individual en el sistema. Por esta razón, estas funciones se pueden ver como funciones para manejar archivos individuales. Además, son de bajo nivel, por lo que solo deberían ser usadas por un usuario por medio una A\+PI. 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{partition_8h_a7c478c925ca4ac4a5904be73ac2ace38}\label{partition_8h_a7c478c925ca4ac4a5904be73ac2ace38}} 
+\index{partition.h@{partition.h}!free\_partition@{free\_partition}}
+\index{free\_partition@{free\_partition}!partition.h@{partition.h}}
+\doxysubsubsection{\texorpdfstring{free\_partition()}{free\_partition()}}
+{\footnotesize\ttfamily void free\+\_\+partition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{partition_8h_a388c9aff8515ce94bbd8d6852bc52662}{Partition}} $\ast$}]{partition }\end{DoxyParamCaption})}
+
+
+
+Función para liberar la memoria usada por un disco. 
+
+Esta función se encarga de liberar la memoria utilizada por una representación de una partición.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in,out}}  & {\em partition} & El puntero de la partición a liberar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{partition_8h_abc20d61c98c141252fe0456acdddb4a7}\label{partition_8h_abc20d61c98c141252fe0456acdddb4a7}} 
+\index{partition.h@{partition.h}!partition\_init@{partition\_init}}
+\index{partition\_init@{partition\_init}!partition.h@{partition.h}}
+\doxysubsubsection{\texorpdfstring{partition\_init()}{partition\_init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{partition_8h_a388c9aff8515ce94bbd8d6852bc52662}{Partition}}$\ast$ partition\+\_\+init (\begin{DoxyParamCaption}\item[{int}]{uid }\end{DoxyParamCaption})}
+
+
+
+Función para instanciar una partición. 
+
+Esta función asigna memoria para la representación de una partición. Notese que el bloque directorio y el bloque de bitmap deben ser instanciados de forma separada, y asignados al bloque partición.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em uid} & Identificador único de la partición. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Un puntero a la partición instanciada. 
+\end{DoxyReturn}

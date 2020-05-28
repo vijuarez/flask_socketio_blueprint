@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Cristian Ruz File System: Fichero Fuente src/cr_API/files_API.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Cristian Ruz File System
+   </div>
+   <div id="projectbrief">Proyecto 1 - Sistemas Operativos y Redes</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_a697ada8258d966c6a70900e5b5e6cfa.html">cr_API</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">files_API.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="files__API_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structcr__file.html">   18</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structcr__file.html">cr_file</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">// TODO atributos del struct</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structcr__file.html#a439227feff9d7f55384e8780cfc2eb82">   22</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structcr__file.html#a439227feff9d7f55384e8780cfc2eb82">size</a>; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;} <a class="code" href="structcr__file.html">crFILE</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="files__API_8h.html#ab00251270838b855477a088387ad1063">   41</a></span>&#160;<a class="code" href="structcr__file.html">crFILE</a>* <a class="code" href="files__API_8h.html#ab00251270838b855477a088387ad1063">cr_open</a>(<span class="keywordtype">unsigned</span> <a class="code" href="structpartition.html">partition</a>, <span class="keywordtype">char</span>* filename, <span class="keywordtype">char</span> mode);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="files__API_8h.html#ab800caa4665133c2c3b38e301ceea2e3">   56</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="files__API_8h.html#ab800caa4665133c2c3b38e301ceea2e3">cr_read</a>(<a class="code" href="structcr__file.html">crFILE</a>* file_desc, <span class="keywordtype">void</span>* buffer, <span class="keywordtype">int</span> nbytes);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="files__API_8h.html#a13d60bbb7589d33a4a07130f55e1874f">   73</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="files__API_8h.html#a13d60bbb7589d33a4a07130f55e1874f">cr_write</a>(<a class="code" href="structcr__file.html">crFILE</a>* file_desc, <span class="keywordtype">void</span>* buffer, <span class="keywordtype">int</span> nbytes);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="files__API_8h.html#a4ae98cad36ee17f8bb0f2e0e1392a092">   83</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="files__API_8h.html#a4ae98cad36ee17f8bb0f2e0e1392a092">cr_close</a>(<a class="code" href="structcr__file.html">crFILE</a>* file_desc);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="files__API_8h.html#ac58fd32f9f993419fa76aa1937ec0c86">  100</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="files__API_8h.html#ac58fd32f9f993419fa76aa1937ec0c86">cr_rm</a>(<span class="keywordtype">unsigned</span> <a class="code" href="structpartition.html">partition</a>, <span class="keywordtype">char</span>* filename);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="files__API_8h.html#a30c000dc8272a63ce8a8c9ead5fc8a88">  118</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="files__API_8h.html#a30c000dc8272a63ce8a8c9ead5fc8a88">cr_hardlink</a>(<span class="keywordtype">unsigned</span> <a class="code" href="structpartition.html">partition</a>, <span class="keywordtype">char</span>* orig, <span class="keywordtype">char</span>* dest);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="files__API_8h.html#af8f581cce1ea5b597fec03310a34ba6d">  138</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="files__API_8h.html#af8f581cce1ea5b597fec03310a34ba6d">cr_softlink</a>(<span class="keywordtype">unsigned</span> partition_orig, <span class="keywordtype">unsigned</span> partition_dest, <span class="keywordtype">char</span>* orig, <span class="keywordtype">char</span>* dest);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="files__API_8h.html#aa97a3e6712a71769248df9c6491071e7">  159</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="files__API_8h.html#aa97a3e6712a71769248df9c6491071e7">cr_unload</a>(<span class="keywordtype">unsigned</span> <a class="code" href="structpartition.html">partition</a>, <span class="keywordtype">char</span>* orig, <span class="keywordtype">char</span>* dest);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="files__API_8h.html#aac5bf52c1a43c918aacbb8d8d0f6267a">  178</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="files__API_8h.html#aac5bf52c1a43c918aacbb8d8d0f6267a">cr_load</a>(<span class="keywordtype">unsigned</span> <a class="code" href="structpartition.html">partition</a>, <span class="keywordtype">char</span>* orig);</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="afiles__API_8h_html_aa97a3e6712a71769248df9c6491071e7"><div class="ttname"><a href="files__API_8h.html#aa97a3e6712a71769248df9c6491071e7">cr_unload</a></div><div class="ttdeci">int cr_unload(unsigned partition, char *orig, char *dest)</div><div class="ttdoc">Función para copiar un archivo o partición completas.</div></div>
+<div class="ttc" id="afiles__API_8h_html_ab00251270838b855477a088387ad1063"><div class="ttname"><a href="files__API_8h.html#ab00251270838b855477a088387ad1063">cr_open</a></div><div class="ttdeci">crFILE * cr_open(unsigned partition, char *filename, char mode)</div><div class="ttdoc">Función para abrir una archivo.</div></div>
+<div class="ttc" id="astructcr__file_html"><div class="ttname"><a href="structcr__file.html">cr_file</a></div><div class="ttdef"><b>Definition:</b> files_API.h:19</div></div>
+<div class="ttc" id="astructpartition_html"><div class="ttname"><a href="structpartition.html">partition</a></div><div class="ttdoc">Representación de una partición.</div><div class="ttdef"><b>Definition:</b> partition.h:23</div></div>
+<div class="ttc" id="afiles__API_8h_html_aac5bf52c1a43c918aacbb8d8d0f6267a"><div class="ttname"><a href="files__API_8h.html#aac5bf52c1a43c918aacbb8d8d0f6267a">cr_load</a></div><div class="ttdeci">int cr_load(unsigned partition, char *orig)</div><div class="ttdoc">Función para copiar un archivo desde el sistema operativo al disco virtual.</div></div>
+<div class="ttc" id="astructcr__file_html_a439227feff9d7f55384e8780cfc2eb82"><div class="ttname"><a href="structcr__file.html#a439227feff9d7f55384e8780cfc2eb82">cr_file::size</a></div><div class="ttdeci">int size</div><div class="ttdoc">Tamaño del archivo.</div><div class="ttdef"><b>Definition:</b> files_API.h:22</div></div>
+<div class="ttc" id="afiles__API_8h_html_af8f581cce1ea5b597fec03310a34ba6d"><div class="ttname"><a href="files__API_8h.html#af8f581cce1ea5b597fec03310a34ba6d">cr_softlink</a></div><div class="ttdeci">int cr_softlink(unsigned partition_orig, unsigned partition_dest, char *orig, char *dest)</div><div class="ttdoc">Función para crear un softlink de un archivo.</div></div>
+<div class="ttc" id="afiles__API_8h_html_ac58fd32f9f993419fa76aa1937ec0c86"><div class="ttname"><a href="files__API_8h.html#ac58fd32f9f993419fa76aa1937ec0c86">cr_rm</a></div><div class="ttdeci">int cr_rm(unsigned partition, char *filename)</div><div class="ttdoc">Función para borrar un archivo.</div></div>
+<div class="ttc" id="afiles__API_8h_html_a30c000dc8272a63ce8a8c9ead5fc8a88"><div class="ttname"><a href="files__API_8h.html#a30c000dc8272a63ce8a8c9ead5fc8a88">cr_hardlink</a></div><div class="ttdeci">int cr_hardlink(unsigned partition, char *orig, char *dest)</div><div class="ttdoc">Función para crear un hardlink de un archivo.</div></div>
+<div class="ttc" id="afiles__API_8h_html_a13d60bbb7589d33a4a07130f55e1874f"><div class="ttname"><a href="files__API_8h.html#a13d60bbb7589d33a4a07130f55e1874f">cr_write</a></div><div class="ttdeci">int cr_write(crFILE *file_desc, void *buffer, int nbytes)</div><div class="ttdoc">Función para escribir desde un buffer a un archivo.</div></div>
+<div class="ttc" id="afiles__API_8h_html_a4ae98cad36ee17f8bb0f2e0e1392a092"><div class="ttname"><a href="files__API_8h.html#a4ae98cad36ee17f8bb0f2e0e1392a092">cr_close</a></div><div class="ttdeci">int cr_close(crFILE *file_desc)</div><div class="ttdoc">Función para cerrar un archivo.</div></div>
+<div class="ttc" id="afiles__API_8h_html_ab800caa4665133c2c3b38e301ceea2e3"><div class="ttname"><a href="files__API_8h.html#ab800caa4665133c2c3b38e301ceea2e3">cr_read</a></div><div class="ttdeci">int cr_read(crFILE *file_desc, void *buffer, int nbytes)</div><div class="ttdoc">Función para leer datos desde un archivo a un buffer.</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

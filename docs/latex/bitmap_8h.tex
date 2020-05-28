@@ -1,0 +1,99 @@
+\hypertarget{bitmap_8h}{}\doxysection{Referencia del Archivo src/file\+System/bitmap.h}
+\label{bitmap_8h}\index{src/fileSystem/bitmap.h@{src/fileSystem/bitmap.h}}
+
+
+Declaración de los métodos para representación de disco en el C\+R\+FS.  
+
+
+\doxysubsection*{Estructuras de datos}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structbitmap__block}{bitmap\+\_\+block}}
+\begin{DoxyCompactList}\small\item\em Representación de un bloque bitmap. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{bitmap_8h_ab958f885f250e4b41b61f90d28bc7f8c}\label{bitmap_8h_ab958f885f250e4b41b61f90d28bc7f8c}} 
+typedef struct \mbox{\hyperlink{structbitmap__block}{bitmap\+\_\+block}} \mbox{\hyperlink{bitmap_8h_ab958f885f250e4b41b61f90d28bc7f8c}{Bitmap\+Block}}
+\begin{DoxyCompactList}\small\item\em Representación de un bloque bitmap. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{bitmap_8h_ab958f885f250e4b41b61f90d28bc7f8c}{Bitmap\+Block}} $\ast$ \mbox{\hyperlink{bitmap_8h_a6ed97b8ef9d36331513a2d3a8ab308fe}{init\+\_\+bitmap}} (unsigned char $\ast$block, int uid)
+\begin{DoxyCompactList}\small\item\em Función para instanciar un bloque de bitmap. \end{DoxyCompactList}\item 
+unsigned char $\ast$ \mbox{\hyperlink{bitmap_8h_ad7107d6ebd6b9b6a562f984cd5bfd4a5}{unload\+\_\+bitmap}} (\mbox{\hyperlink{bitmap_8h_ab958f885f250e4b41b61f90d28bc7f8c}{Bitmap\+Block}} $\ast$bitmap)
+\begin{DoxyCompactList}\small\item\em Función para convertir un bloque bitmap a binario. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bitmap_8h_a851248fc8f1a175d35de569d76883d78}{free\+\_\+bitmap}} (\mbox{\hyperlink{bitmap_8h_ab958f885f250e4b41b61f90d28bc7f8c}{Bitmap\+Block}} $\ast$bitmap)
+\begin{DoxyCompactList}\small\item\em Función para liberar un bloque de bitmap. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Declaración de los métodos para representación de disco en el C\+R\+FS. 
+
+\begin{DoxyDate}{Fecha}
+28 May 2020 Se incluyen los métodos y representación para manejar el bloque bitmap de una partición del C\+R\+FS. Debido a la información que este tipo de bloque contiene, se debe mantener constantemente actualizado para representar correctamente el estado del disco. Por esto, se espera que estos métodos se ocupen tanto de forma interna por el sistema (para mantener la información actualizada) como externa (expuesto por la A\+PI para conocer el espacio libre). 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{bitmap_8h_a851248fc8f1a175d35de569d76883d78}\label{bitmap_8h_a851248fc8f1a175d35de569d76883d78}} 
+\index{bitmap.h@{bitmap.h}!free\_bitmap@{free\_bitmap}}
+\index{free\_bitmap@{free\_bitmap}!bitmap.h@{bitmap.h}}
+\doxysubsubsection{\texorpdfstring{free\_bitmap()}{free\_bitmap()}}
+{\footnotesize\ttfamily void free\+\_\+bitmap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{bitmap_8h_ab958f885f250e4b41b61f90d28bc7f8c}{Bitmap\+Block}} $\ast$}]{bitmap }\end{DoxyParamCaption})}
+
+
+
+Función para liberar un bloque de bitmap. 
+
+Esta función libera la memoria asociada a un bloque de bitmap. No se encarga de guardar esta información de ninguna forma, esto debe realizarse antes de liberar la memoria.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in,out}}  & {\em bitmap} & El bloque a liberar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{bitmap_8h_a6ed97b8ef9d36331513a2d3a8ab308fe}\label{bitmap_8h_a6ed97b8ef9d36331513a2d3a8ab308fe}} 
+\index{bitmap.h@{bitmap.h}!init\_bitmap@{init\_bitmap}}
+\index{init\_bitmap@{init\_bitmap}!bitmap.h@{bitmap.h}}
+\doxysubsubsection{\texorpdfstring{init\_bitmap()}{init\_bitmap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{bitmap_8h_ab958f885f250e4b41b61f90d28bc7f8c}{Bitmap\+Block}}$\ast$ init\+\_\+bitmap (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{block,  }\item[{int}]{uid }\end{DoxyParamCaption})}
+
+
+
+Función para instanciar un bloque de bitmap. 
+
+Esta función recibe un array de integers, los cuales son interpretados como un un bloque de bitmap. Cada bit de esta esta array indica si cierto bloque esta disponible para escribir (0) o esta ocupado (1).
+
+Si el array no es válido, se devuelve un puntero N\+U\+LL.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em block} & La array de caracteres a interpretar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em uid} & El identificador del bloque a instanciar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Un puntero al bloque instanciado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bitmap_8h_ad7107d6ebd6b9b6a562f984cd5bfd4a5}\label{bitmap_8h_ad7107d6ebd6b9b6a562f984cd5bfd4a5}} 
+\index{bitmap.h@{bitmap.h}!unload\_bitmap@{unload\_bitmap}}
+\index{unload\_bitmap@{unload\_bitmap}!bitmap.h@{bitmap.h}}
+\doxysubsubsection{\texorpdfstring{unload\_bitmap()}{unload\_bitmap()}}
+{\footnotesize\ttfamily unsigned char$\ast$ unload\+\_\+bitmap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{bitmap_8h_ab958f885f250e4b41b61f90d28bc7f8c}{Bitmap\+Block}} $\ast$}]{bitmap }\end{DoxyParamCaption})}
+
+
+
+Función para convertir un bloque bitmap a binario. 
+
+Esta función toma un bloque bitmap ya instanciado, y lo convierte a una representación binaria, tal como estaría en el archivo de disco virtual. Notese que la array vendra en Big Endian.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em bitmap} & El bloque en cuestión. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+La array de datos binarios. 
+\end{DoxyReturn}

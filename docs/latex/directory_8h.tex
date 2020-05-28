@@ -1,0 +1,171 @@
+\hypertarget{directory_8h}{}\doxysection{Referencia del Archivo src/file\+System/directory.h}
+\label{directory_8h}\index{src/fileSystem/directory.h@{src/fileSystem/directory.h}}
+
+
+Declaración de los métodos para manejo de directorios en el C\+R\+FS.  
+
+
+{\ttfamily \#include \char`\"{}index.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\doxysubsection*{Estructuras de datos}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdirectory__entry}{directory\+\_\+entry}}
+\begin{DoxyCompactList}\small\item\em Representación de un directorio u archivo. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdirectory__block}{directory\+\_\+block}}
+\begin{DoxyCompactList}\small\item\em Representación de un bloque directorio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{directory_8h_ab121a5ed66e07f5eae659e79d3cab19c}\label{directory_8h_ab121a5ed66e07f5eae659e79d3cab19c}} 
+typedef struct \mbox{\hyperlink{structdirectory__entry}{directory\+\_\+entry}} \mbox{\hyperlink{directory_8h_ab121a5ed66e07f5eae659e79d3cab19c}{Entry}}
+\begin{DoxyCompactList}\small\item\em Representación de un directorio u archivo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{directory_8h_ad8a73f7447e66867e5653d9d60401e20}\label{directory_8h_ad8a73f7447e66867e5653d9d60401e20}} 
+typedef struct \mbox{\hyperlink{structdirectory__block}{directory\+\_\+block}} \mbox{\hyperlink{directory_8h_ad8a73f7447e66867e5653d9d60401e20}{Directory\+Block}}
+\begin{DoxyCompactList}\small\item\em Representación de un bloque directorio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{directory_8h_ad8a73f7447e66867e5653d9d60401e20}{Directory\+Block}} $\ast$ \mbox{\hyperlink{directory_8h_a02e906284f2c1eab40d145fe4ed4cd34}{directory\+\_\+init}} (unsigned char $\ast$block, int uid)
+\begin{DoxyCompactList}\small\item\em Función para instanciar un bloque de directorio. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{directory_8h_ac6de19bea79cca65c965eddb83dc0a1f}{new\+\_\+entry}} (\mbox{\hyperlink{directory_8h_ad8a73f7447e66867e5653d9d60401e20}{Directory\+Block}} $\ast$directory, unsigned int index\+\_\+uid, unsigned int valid, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Inserta una nueva entrada al directorio. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{directory_8h_ac1e6696d988d3c1724de509c57edaa83}{print\+\_\+entries}} (\mbox{\hyperlink{directory_8h_ad8a73f7447e66867e5653d9d60401e20}{Directory\+Block}} $\ast$directory)
+\begin{DoxyCompactList}\small\item\em Imprime todas las entradas del directorio. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{directory_8h_aaa4be76956a7b1bb82b372efeada4977}{free\+\_\+directory}} (\mbox{\hyperlink{directory_8h_ad8a73f7447e66867e5653d9d60401e20}{Directory\+Block}} $\ast$directory)
+\begin{DoxyCompactList}\small\item\em Libera todos los recursos asociados al bloque directorio. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{directory_8h_a1964ae468028aa89baf3ed2f2af57ba7}{free\+\_\+entry}} (\mbox{\hyperlink{directory_8h_ab121a5ed66e07f5eae659e79d3cab19c}{Entry}} $\ast$entry)
+\begin{DoxyCompactList}\small\item\em Libera todos los recursos asociados una entrada del directorio. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{directory_8h_aa299edce2f4dc9999bb9f1917b3baf0a}{exists\+\_\+file}} (\mbox{\hyperlink{directory_8h_ad8a73f7447e66867e5653d9d60401e20}{Directory\+Block}} $\ast$directory, char $\ast$file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Verifica la existencia de un archivo en cierto directorio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Declaración de los métodos para manejo de directorios en el C\+R\+FS. 
+
+\begin{DoxyDate}{Fecha}
+27 May 2020 Se incluyen los métodos y representaciones para manejar directorios en el C\+R\+FS. Estos métodos son de bajo nivel, y no se espera que el usuario interactue con ellos, deben usarse por debajo de una A\+PI. 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{directory_8h_a02e906284f2c1eab40d145fe4ed4cd34}\label{directory_8h_a02e906284f2c1eab40d145fe4ed4cd34}} 
+\index{directory.h@{directory.h}!directory\_init@{directory\_init}}
+\index{directory\_init@{directory\_init}!directory.h@{directory.h}}
+\doxysubsubsection{\texorpdfstring{directory\_init()}{directory\_init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{directory_8h_ad8a73f7447e66867e5653d9d60401e20}{Directory\+Block}}$\ast$ directory\+\_\+init (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{block,  }\item[{int}]{uid }\end{DoxyParamCaption})}
+
+
+
+Función para instanciar un bloque de directorio. 
+
+Esta función recibe un array de integers, los cuales son interpretados como un un bloque de directorio. El primer bit indica la validez del bloque, los siguientes 23 bit indican la posición del bloque índice del archivo, y los siguientes 29 bytes el nombre del archivo, encodeado en A\+S\+C\+II y padeado con {\ttfamily 0x00}.
+
+Si el array no es válido, se devuelve un puntero N\+U\+LL.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em block} & La array de caracteres a interpretar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em uid} & El identificador del bloque a instanciar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Un puntero al bloque instanciado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{directory_8h_aa299edce2f4dc9999bb9f1917b3baf0a}\label{directory_8h_aa299edce2f4dc9999bb9f1917b3baf0a}} 
+\index{directory.h@{directory.h}!exists\_file@{exists\_file}}
+\index{exists\_file@{exists\_file}!directory.h@{directory.h}}
+\doxysubsubsection{\texorpdfstring{exists\_file()}{exists\_file()}}
+{\footnotesize\ttfamily bool exists\+\_\+file (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{directory_8h_ad8a73f7447e66867e5653d9d60401e20}{Directory\+Block}} $\ast$}]{directory,  }\item[{char $\ast$}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Verifica la existencia de un archivo en cierto directorio. 
+
+Se revisan las entradas de un directorio, buscando una con el nombre entregado.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em directory} & El directorio donde buscar. \\
+\hline
+ & {\em file\+\_\+name\mbox{[}in\mbox{]}} & El nombre del archivo buscado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Si el archivo esta o no. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{directory_8h_aaa4be76956a7b1bb82b372efeada4977}\label{directory_8h_aaa4be76956a7b1bb82b372efeada4977}} 
+\index{directory.h@{directory.h}!free\_directory@{free\_directory}}
+\index{free\_directory@{free\_directory}!directory.h@{directory.h}}
+\doxysubsubsection{\texorpdfstring{free\_directory()}{free\_directory()}}
+{\footnotesize\ttfamily void free\+\_\+directory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{directory_8h_ad8a73f7447e66867e5653d9d60401e20}{Directory\+Block}} $\ast$}]{directory }\end{DoxyParamCaption})}
+
+
+
+Libera todos los recursos asociados al bloque directorio. 
+
+Se liberan los recursos asociados a la representación de un directorio. No se maneja la actualización en disco del disco virtual, esto debe manejarse de forma aparte.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in,out}}  & {\em directory} & El directorio en cuestión. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{directory_8h_a1964ae468028aa89baf3ed2f2af57ba7}\label{directory_8h_a1964ae468028aa89baf3ed2f2af57ba7}} 
+\index{directory.h@{directory.h}!free\_entry@{free\_entry}}
+\index{free\_entry@{free\_entry}!directory.h@{directory.h}}
+\doxysubsubsection{\texorpdfstring{free\_entry()}{free\_entry()}}
+{\footnotesize\ttfamily void free\+\_\+entry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{directory_8h_ab121a5ed66e07f5eae659e79d3cab19c}{Entry}} $\ast$}]{entry }\end{DoxyParamCaption})}
+
+
+
+Libera todos los recursos asociados una entrada del directorio. 
+
+Se liberan los recursos asociados a la representación de una entrada. No se maneja la actualización en disco del disco virtual, esto debe manejarse de forma aparte.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in,out}}  & {\em entry} & La entrada en cuestión. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{directory_8h_ac6de19bea79cca65c965eddb83dc0a1f}\label{directory_8h_ac6de19bea79cca65c965eddb83dc0a1f}} 
+\index{directory.h@{directory.h}!new\_entry@{new\_entry}}
+\index{new\_entry@{new\_entry}!directory.h@{directory.h}}
+\doxysubsubsection{\texorpdfstring{new\_entry()}{new\_entry()}}
+{\footnotesize\ttfamily void new\+\_\+entry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{directory_8h_ad8a73f7447e66867e5653d9d60401e20}{Directory\+Block}} $\ast$}]{directory,  }\item[{unsigned int}]{index\+\_\+uid,  }\item[{unsigned int}]{valid,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Inserta una nueva entrada al directorio. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in,out}}  & {\em directory} & El directorio donde agregar la entrada. \\
+\hline
+\mbox{\texttt{ in}}  & {\em index\+\_\+uid} & La dirección del bloque índice de la entrada. \\
+\hline
+\mbox{\texttt{ in}}  & {\em valid} & La validez del bloque. \\
+\hline
+\mbox{\texttt{ in}}  & {\em name} & El nombre de la entrada. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{directory_8h_ac1e6696d988d3c1724de509c57edaa83}\label{directory_8h_ac1e6696d988d3c1724de509c57edaa83}} 
+\index{directory.h@{directory.h}!print\_entries@{print\_entries}}
+\index{print\_entries@{print\_entries}!directory.h@{directory.h}}
+\doxysubsubsection{\texorpdfstring{print\_entries()}{print\_entries()}}
+{\footnotesize\ttfamily void print\+\_\+entries (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{directory_8h_ad8a73f7447e66867e5653d9d60401e20}{Directory\+Block}} $\ast$}]{directory }\end{DoxyParamCaption})}
+
+
+
+Imprime todas las entradas del directorio. 
+
+Imprime a {\ttfamily stdout} todas las entradas en un directorio.
+
+T\+O\+DO\+: Agregar output de ejemplo
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em directory} & El directorio en cuestión. \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,65 @@
+\hypertarget{structdirectory__entry}{}\doxysection{Referencia de la Estructura directory\+\_\+entry}
+\label{structdirectory__entry}\index{directory\_entry@{directory\_entry}}
+
+
+Representación de un directorio u archivo.  
+
+
+
+
+{\ttfamily \#include $<$directory.\+h$>$}
+
+\doxysubsection*{Campos de datos}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{structdirectory__entry_a4a32eceb12f1d4b807a007461348ec09}{valid}}
+\item 
+unsigned int \mbox{\hyperlink{structdirectory__entry_a209c57f3b90fc9ffa5e05a92e3e8ab47}{index\+\_\+uid}}
+\item 
+\mbox{\hyperlink{index_8h_a536b5741a20c3152ca9a079f0b2167e6}{Index\+Block}} $\ast$ \mbox{\hyperlink{structdirectory__entry_a6af034ad87e5f8c03d011ad49c589f13}{index}}
+\item 
+char $\ast$ \mbox{\hyperlink{structdirectory__entry_a5ac083a645d964373f022d03df4849c8}{name}}
+\item 
+struct \mbox{\hyperlink{structdirectory__entry}{directory\+\_\+entry}} $\ast$ \mbox{\hyperlink{structdirectory__entry_a4b0d4cbb8695e174c4bcbb756cf3a721}{next}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representación de un directorio u archivo. 
+
+\doxysubsection{Documentación de los campos}
+\mbox{\Hypertarget{structdirectory__entry_a6af034ad87e5f8c03d011ad49c589f13}\label{structdirectory__entry_a6af034ad87e5f8c03d011ad49c589f13}} 
+\index{directory\_entry@{directory\_entry}!index@{index}}
+\index{index@{index}!directory\_entry@{directory\_entry}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily \mbox{\hyperlink{index_8h_a536b5741a20c3152ca9a079f0b2167e6}{Index\+Block}}$\ast$ index}
+
+Puntero al bloque indice del archivo \mbox{\Hypertarget{structdirectory__entry_a209c57f3b90fc9ffa5e05a92e3e8ab47}\label{structdirectory__entry_a209c57f3b90fc9ffa5e05a92e3e8ab47}} 
+\index{directory\_entry@{directory\_entry}!index\_uid@{index\_uid}}
+\index{index\_uid@{index\_uid}!directory\_entry@{directory\_entry}}
+\doxysubsubsection{\texorpdfstring{index\_uid}{index\_uid}}
+{\footnotesize\ttfamily unsigned int index\+\_\+uid}
+
+Id unico del bloque indice del archivo de la entrada \mbox{\Hypertarget{structdirectory__entry_a5ac083a645d964373f022d03df4849c8}\label{structdirectory__entry_a5ac083a645d964373f022d03df4849c8}} 
+\index{directory\_entry@{directory\_entry}!name@{name}}
+\index{name@{name}!directory\_entry@{directory\_entry}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily char$\ast$ name}
+
+Contiene el nombre del archivo o directorio \mbox{\Hypertarget{structdirectory__entry_a4b0d4cbb8695e174c4bcbb756cf3a721}\label{structdirectory__entry_a4b0d4cbb8695e174c4bcbb756cf3a721}} 
+\index{directory\_entry@{directory\_entry}!next@{next}}
+\index{next@{next}!directory\_entry@{directory\_entry}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structdirectory__entry}{directory\+\_\+entry}}$\ast$ next}
+
+Puntero a la siguiente entrada del directorio \mbox{\Hypertarget{structdirectory__entry_a4a32eceb12f1d4b807a007461348ec09}\label{structdirectory__entry_a4a32eceb12f1d4b807a007461348ec09}} 
+\index{directory\_entry@{directory\_entry}!valid@{valid}}
+\index{valid@{valid}!directory\_entry@{directory\_entry}}
+\doxysubsubsection{\texorpdfstring{valid}{valid}}
+{\footnotesize\ttfamily unsigned int valid}
+
+Indica si la entrada es invalida (0) o valida (1) 
+
+La documentación para esta estructura fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+src/file\+System/\mbox{\hyperlink{directory_8h}{directory.\+h}}\end{DoxyCompactItemize}

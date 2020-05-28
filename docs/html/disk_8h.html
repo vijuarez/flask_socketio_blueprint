@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Cristian Ruz File System: Referencia del Archivo src/fileSystem/disk.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Cristian Ruz File System
+   </div>
+   <div id="projectbrief">Proyecto 1 - Sistemas Operativos y Redes</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_63fde36204e32b08dfdf7d1cf2e83767.html">fileSystem</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Estructuras de datos</a> &#124;
+<a href="#define-members">defines</a> &#124;
+<a href="#typedef-members">typedefs</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo disk.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Declaración de los métodos para representación de disco en el CRFS.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="partition_8h_source.html">partition.h</a>&quot;</code><br />
+</div>
+<p><a href="disk_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Estructuras de datos</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdisk.html">disk</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a453cc933227b48776a8d405242576f38"><td class="memItemLeft" align="right" valign="top"><a id="a453cc933227b48776a8d405242576f38"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disk_8h.html#a453cc933227b48776a8d405242576f38">BLOCKS_COUNT</a>&#160;&#160;&#160;262144</td></tr>
+<tr class="memdesc:a453cc933227b48776a8d405242576f38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Numero de bloques en el disco. <br /></td></tr>
+<tr class="separator:a453cc933227b48776a8d405242576f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b20d41d6252e9871430c242cb1a56e7"><td class="memItemLeft" align="right" valign="top"><a id="a6b20d41d6252e9871430c242cb1a56e7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disk_8h.html#a6b20d41d6252e9871430c242cb1a56e7">BUFFER_SIZE</a>&#160;&#160;&#160;8192</td></tr>
+<tr class="memdesc:a6b20d41d6252e9871430c242cb1a56e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tamaño de cada bloque. <br /></td></tr>
+<tr class="separator:a6b20d41d6252e9871430c242cb1a56e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3d3ffd91206adf249d3318930f024af"><td class="memItemLeft" align="right" valign="top"><a id="ad3d3ffd91206adf249d3318930f024af"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disk_8h.html#ad3d3ffd91206adf249d3318930f024af">PARTITION_COUNT</a>&#160;&#160;&#160;4</td></tr>
+<tr class="memdesc:ad3d3ffd91206adf249d3318930f024af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Numero de particiones en el disco. <br /></td></tr>
+<tr class="separator:ad3d3ffd91206adf249d3318930f024af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+typedefs</h2></td></tr>
+<tr class="memitem:a092d312f9c3a96c33fed06a3f0160223"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structdisk.html">disk</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disk_8h.html#a092d312f9c3a96c33fed06a3f0160223">Disk</a></td></tr>
+<tr class="separator:a092d312f9c3a96c33fed06a3f0160223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:abbc45893c2dd8402a6f06949ba4296b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="disk_8h.html#a092d312f9c3a96c33fed06a3f0160223">Disk</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disk_8h.html#abbc45893c2dd8402a6f06949ba4296b8">init_disk</a> (char *<a class="el" href="cr__API_8h.html#a2e94397c2a95d98828c4b5c4865eec79">disk_path</a>)</td></tr>
+<tr class="memdesc:abbc45893c2dd8402a6f06949ba4296b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función para cargar un disco en memoria.  <a href="disk_8h.html#abbc45893c2dd8402a6f06949ba4296b8">Más...</a><br /></td></tr>
+<tr class="separator:abbc45893c2dd8402a6f06949ba4296b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbc664127dcbb6d86ffbdbf8e09c51c8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disk_8h.html#abbc664127dcbb6d86ffbdbf8e09c51c8">update_disk</a> (<a class="el" href="disk_8h.html#a092d312f9c3a96c33fed06a3f0160223">Disk</a> *<a class="el" href="structdisk.html">disk</a>, char *<a class="el" href="cr__API_8h.html#a2e94397c2a95d98828c4b5c4865eec79">disk_path</a>)</td></tr>
+<tr class="memdesc:abbc664127dcbb6d86ffbdbf8e09c51c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función para actualizar un disco virtual.  <a href="disk_8h.html#abbc664127dcbb6d86ffbdbf8e09c51c8">Más...</a><br /></td></tr>
+<tr class="separator:abbc664127dcbb6d86ffbdbf8e09c51c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86430b5dadf598d711b8ff3e9e8f8f63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disk_8h.html#a86430b5dadf598d711b8ff3e9e8f8f63">free_disk</a> (<a class="el" href="disk_8h.html#a092d312f9c3a96c33fed06a3f0160223">Disk</a> *<a class="el" href="structdisk.html">disk</a>)</td></tr>
+<tr class="memdesc:a86430b5dadf598d711b8ff3e9e8f8f63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función para liberar la memoria usada por un disco.  <a href="disk_8h.html#a86430b5dadf598d711b8ff3e9e8f8f63">Más...</a><br /></td></tr>
+<tr class="separator:a86430b5dadf598d711b8ff3e9e8f8f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Declaración de los métodos para representación de disco en el CRFS. </p>
+<dl class="section date"><dt>Fecha</dt><dd>28 May 2020 Se incluyen los métodos para manejar un disco virtual entero en el CRFS, incluyendo representación e inicialización de este. Este conjunto de funciones son esenciales para preparar al CRFS para otras operaciones más sofisticadas. </dd></dl>
+</div><h2 class="groupheader">Documentación de los 'typedefs'</h2>
+<a id="a092d312f9c3a96c33fed06a3f0160223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a092d312f9c3a96c33fed06a3f0160223">&#9670;&nbsp;</a></span>Disk</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structdisk.html">disk</a> <a class="el" href="disk_8h.html#a092d312f9c3a96c33fed06a3f0160223">Disk</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Representación de un disco virtual. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a id="a86430b5dadf598d711b8ff3e9e8f8f63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86430b5dadf598d711b8ff3e9e8f8f63">&#9670;&nbsp;</a></span>free_disk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_disk </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="disk_8h.html#a092d312f9c3a96c33fed06a3f0160223">Disk</a> *&#160;</td>
+          <td class="paramname"><em>disk</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función para liberar la memoria usada por un disco. </p>
+<p>Esta función se encarga de liberar la memoria utilizada por una representación de un disco, descargando el disco por completo. Notese que esta función <b>no actualiza el disco</b>, solo se encarga de liberarlo.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">disk</td><td>El puntero del disco a liberar. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abbc45893c2dd8402a6f06949ba4296b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbc45893c2dd8402a6f06949ba4296b8">&#9670;&nbsp;</a></span>init_disk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="disk_8h.html#a092d312f9c3a96c33fed06a3f0160223">Disk</a>* init_disk </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>disk_path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función para cargar un disco en memoria. </p>
+<p>Esta función recibe la dirección de un disco virtual, la cual es cargada en memoria como el sujeto para el CRFS. La totalidad del disco es cargado en memoria, y este se actualiza en el disco duro una vez el sistema termine su operación.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">disk_path</td><td>La ruta del disco virtual. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Un puntero a la representación del disco. </dd></dl>
+
+</div>
+</div>
+<a id="abbc664127dcbb6d86ffbdbf8e09c51c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbc664127dcbb6d86ffbdbf8e09c51c8">&#9670;&nbsp;</a></span>update_disk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int update_disk </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="disk_8h.html#a092d312f9c3a96c33fed06a3f0160223">Disk</a> *&#160;</td>
+          <td class="paramname"><em>disk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>disk_path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función para actualizar un disco virtual. </p>
+<p>Esta función se encarga de copiar el estado actual del CRFS a un disco virtual. Esta operación puede ser demorosa, dependiendo del tamaño del disco y la capacidad del computador.</p>
+<p>Si retorna 0, la operación se realizo correctamente. Si retorna 1, ocurrió un error de escritura.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">disk</td><td>El puntero del disco a actualizar. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">disk_path</td><td>La ruta del disco virtual. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>El resultado de la operación. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

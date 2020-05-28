@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Cristian Ruz File System: Fichero Fuente src/fileSystem/directory.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Cristian Ruz File System
+   </div>
+   <div id="projectbrief">Proyecto 1 - Sistemas Operativos y Redes</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_63fde36204e32b08dfdf7d1cf2e83767.html">fileSystem</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">directory.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="directory_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="index_8h.html">index.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structdirectory__entry.html">   19</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structdirectory__entry.html">directory_entry</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structdirectory__entry.html#a4a32eceb12f1d4b807a007461348ec09">   23</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structdirectory__entry.html#a4a32eceb12f1d4b807a007461348ec09">valid</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structdirectory__entry.html#a209c57f3b90fc9ffa5e05a92e3e8ab47">   26</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structdirectory__entry.html#a209c57f3b90fc9ffa5e05a92e3e8ab47">index_uid</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structdirectory__entry.html#a6af034ad87e5f8c03d011ad49c589f13">   29</a></span>&#160;    <a class="code" href="structindex__block.html">IndexBlock</a> *<a class="code" href="structdirectory__entry.html#a6af034ad87e5f8c03d011ad49c589f13">index</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structdirectory__entry.html#a5ac083a645d964373f022d03df4849c8">   32</a></span>&#160;    <span class="keywordtype">char</span> *<a class="code" href="structdirectory__entry.html#a5ac083a645d964373f022d03df4849c8">name</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structdirectory__entry.html#a4b0d4cbb8695e174c4bcbb756cf3a721">   35</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structdirectory__entry.html">directory_entry</a> *<a class="code" href="structdirectory__entry.html#a4b0d4cbb8695e174c4bcbb756cf3a721">next</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="directory_8h.html#ab121a5ed66e07f5eae659e79d3cab19c">   36</a></span>&#160;} <a class="code" href="directory_8h.html#ab121a5ed66e07f5eae659e79d3cab19c">Entry</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structdirectory__block.html">   41</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structdirectory__block.html">directory_block</a></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="structdirectory__block.html#a60a34315f460179939054acaf3ed8163">   45</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structdirectory__block.html#a60a34315f460179939054acaf3ed8163">uid</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="structdirectory__block.html#ae3e5fe5203364a67fb65c0bf64b251c0">   48</a></span>&#160;    <a class="code" href="structdirectory__entry.html">Entry</a> *<a class="code" href="structdirectory__block.html#ae3e5fe5203364a67fb65c0bf64b251c0">first_entry</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="structdirectory__block.html#ad3780b9ab3e05c73e670e8d6582fa105">   51</a></span>&#160;    <a class="code" href="structdirectory__entry.html">Entry</a> *<a class="code" href="structdirectory__block.html#ad3780b9ab3e05c73e670e8d6582fa105">last_entry</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="directory_8h.html#ad8a73f7447e66867e5653d9d60401e20">   52</a></span>&#160;} <a class="code" href="directory_8h.html#ad8a73f7447e66867e5653d9d60401e20">DirectoryBlock</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">// Declaramos las funciones asociadas</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="directory_8h.html#a02e906284f2c1eab40d145fe4ed4cd34">   70</a></span>&#160;<a class="code" href="structdirectory__block.html">DirectoryBlock</a> *<a class="code" href="directory_8h.html#a02e906284f2c1eab40d145fe4ed4cd34">directory_init</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *block, <span class="keywordtype">int</span> uid);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="directory_8h.html#ac6de19bea79cca65c965eddb83dc0a1f">   80</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="directory_8h.html#ac6de19bea79cca65c965eddb83dc0a1f">new_entry</a>(<a class="code" href="structdirectory__block.html">DirectoryBlock</a> *directory, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index_uid, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> valid, <span class="keywordtype">char</span> *name);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="directory_8h.html#ac1e6696d988d3c1724de509c57edaa83">   91</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="directory_8h.html#ac1e6696d988d3c1724de509c57edaa83">print_entries</a>(<a class="code" href="structdirectory__block.html">DirectoryBlock</a> *directory);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="directory_8h.html#aaa4be76956a7b1bb82b372efeada4977">  102</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="directory_8h.html#aaa4be76956a7b1bb82b372efeada4977">free_directory</a>(<a class="code" href="structdirectory__block.html">DirectoryBlock</a> *directory);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="directory_8h.html#a1964ae468028aa89baf3ed2f2af57ba7">  113</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="directory_8h.html#a1964ae468028aa89baf3ed2f2af57ba7">free_entry</a>(<a class="code" href="structdirectory__entry.html">Entry</a> *entry);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="directory_8h.html#aa299edce2f4dc9999bb9f1917b3baf0a">  125</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="directory_8h.html#aa299edce2f4dc9999bb9f1917b3baf0a">exists_file</a>(<a class="code" href="structdirectory__block.html">DirectoryBlock</a> *directory, <span class="keywordtype">char</span> *file_name);</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astructdirectory__entry_html_a5ac083a645d964373f022d03df4849c8"><div class="ttname"><a href="structdirectory__entry.html#a5ac083a645d964373f022d03df4849c8">directory_entry::name</a></div><div class="ttdeci">char * name</div><div class="ttdef"><b>Definition:</b> directory.h:32</div></div>
+<div class="ttc" id="adirectory_8h_html_ac6de19bea79cca65c965eddb83dc0a1f"><div class="ttname"><a href="directory_8h.html#ac6de19bea79cca65c965eddb83dc0a1f">new_entry</a></div><div class="ttdeci">void new_entry(DirectoryBlock *directory, unsigned int index_uid, unsigned int valid, char *name)</div><div class="ttdoc">Inserta una nueva entrada al directorio.</div></div>
+<div class="ttc" id="adirectory_8h_html_aa299edce2f4dc9999bb9f1917b3baf0a"><div class="ttname"><a href="directory_8h.html#aa299edce2f4dc9999bb9f1917b3baf0a">exists_file</a></div><div class="ttdeci">bool exists_file(DirectoryBlock *directory, char *file_name)</div><div class="ttdoc">Verifica la existencia de un archivo en cierto directorio.</div></div>
+<div class="ttc" id="astructdirectory__block_html"><div class="ttname"><a href="structdirectory__block.html">directory_block</a></div><div class="ttdoc">Representación de un bloque directorio.</div><div class="ttdef"><b>Definition:</b> directory.h:42</div></div>
+<div class="ttc" id="aindex_8h_html"><div class="ttname"><a href="index_8h.html">index.h</a></div><div class="ttdoc">Declaración de los métodos para bloques índice CRFS.</div></div>
+<div class="ttc" id="astructdirectory__block_html_a60a34315f460179939054acaf3ed8163"><div class="ttname"><a href="structdirectory__block.html#a60a34315f460179939054acaf3ed8163">directory_block::uid</a></div><div class="ttdeci">int uid</div><div class="ttdef"><b>Definition:</b> directory.h:45</div></div>
+<div class="ttc" id="adirectory_8h_html_a02e906284f2c1eab40d145fe4ed4cd34"><div class="ttname"><a href="directory_8h.html#a02e906284f2c1eab40d145fe4ed4cd34">directory_init</a></div><div class="ttdeci">DirectoryBlock * directory_init(unsigned char *block, int uid)</div><div class="ttdoc">Función para instanciar un bloque de directorio.</div></div>
+<div class="ttc" id="astructindex__block_html"><div class="ttname"><a href="structindex__block.html">index_block</a></div><div class="ttdoc">Representación de un bloque indice.</div><div class="ttdef"><b>Definition:</b> index.h:22</div></div>
+<div class="ttc" id="astructdirectory__block_html_ae3e5fe5203364a67fb65c0bf64b251c0"><div class="ttname"><a href="structdirectory__block.html#ae3e5fe5203364a67fb65c0bf64b251c0">directory_block::first_entry</a></div><div class="ttdeci">Entry * first_entry</div><div class="ttdef"><b>Definition:</b> directory.h:48</div></div>
+<div class="ttc" id="adirectory_8h_html_ad8a73f7447e66867e5653d9d60401e20"><div class="ttname"><a href="directory_8h.html#ad8a73f7447e66867e5653d9d60401e20">DirectoryBlock</a></div><div class="ttdeci">struct directory_block DirectoryBlock</div><div class="ttdoc">Representación de un bloque directorio.</div></div>
+<div class="ttc" id="astructdirectory__entry_html_a6af034ad87e5f8c03d011ad49c589f13"><div class="ttname"><a href="structdirectory__entry.html#a6af034ad87e5f8c03d011ad49c589f13">directory_entry::index</a></div><div class="ttdeci">IndexBlock * index</div><div class="ttdef"><b>Definition:</b> directory.h:29</div></div>
+<div class="ttc" id="astructdirectory__block_html_ad3780b9ab3e05c73e670e8d6582fa105"><div class="ttname"><a href="structdirectory__block.html#ad3780b9ab3e05c73e670e8d6582fa105">directory_block::last_entry</a></div><div class="ttdeci">Entry * last_entry</div><div class="ttdef"><b>Definition:</b> directory.h:51</div></div>
+<div class="ttc" id="astructdirectory__entry_html_a209c57f3b90fc9ffa5e05a92e3e8ab47"><div class="ttname"><a href="structdirectory__entry.html#a209c57f3b90fc9ffa5e05a92e3e8ab47">directory_entry::index_uid</a></div><div class="ttdeci">unsigned int index_uid</div><div class="ttdef"><b>Definition:</b> directory.h:26</div></div>
+<div class="ttc" id="astructdirectory__entry_html_a4b0d4cbb8695e174c4bcbb756cf3a721"><div class="ttname"><a href="structdirectory__entry.html#a4b0d4cbb8695e174c4bcbb756cf3a721">directory_entry::next</a></div><div class="ttdeci">struct directory_entry * next</div><div class="ttdef"><b>Definition:</b> directory.h:35</div></div>
+<div class="ttc" id="adirectory_8h_html_a1964ae468028aa89baf3ed2f2af57ba7"><div class="ttname"><a href="directory_8h.html#a1964ae468028aa89baf3ed2f2af57ba7">free_entry</a></div><div class="ttdeci">void free_entry(Entry *entry)</div><div class="ttdoc">Libera todos los recursos asociados una entrada del directorio.</div></div>
+<div class="ttc" id="adirectory_8h_html_ab121a5ed66e07f5eae659e79d3cab19c"><div class="ttname"><a href="directory_8h.html#ab121a5ed66e07f5eae659e79d3cab19c">Entry</a></div><div class="ttdeci">struct directory_entry Entry</div><div class="ttdoc">Representación de un directorio u archivo.</div></div>
+<div class="ttc" id="astructdirectory__entry_html"><div class="ttname"><a href="structdirectory__entry.html">directory_entry</a></div><div class="ttdoc">Representación de un directorio u archivo.</div><div class="ttdef"><b>Definition:</b> directory.h:20</div></div>
+<div class="ttc" id="adirectory_8h_html_aaa4be76956a7b1bb82b372efeada4977"><div class="ttname"><a href="directory_8h.html#aaa4be76956a7b1bb82b372efeada4977">free_directory</a></div><div class="ttdeci">void free_directory(DirectoryBlock *directory)</div><div class="ttdoc">Libera todos los recursos asociados al bloque directorio.</div></div>
+<div class="ttc" id="astructdirectory__entry_html_a4a32eceb12f1d4b807a007461348ec09"><div class="ttname"><a href="structdirectory__entry.html#a4a32eceb12f1d4b807a007461348ec09">directory_entry::valid</a></div><div class="ttdeci">unsigned int valid</div><div class="ttdef"><b>Definition:</b> directory.h:23</div></div>
+<div class="ttc" id="adirectory_8h_html_ac1e6696d988d3c1724de509c57edaa83"><div class="ttname"><a href="directory_8h.html#ac1e6696d988d3c1724de509c57edaa83">print_entries</a></div><div class="ttdeci">void print_entries(DirectoryBlock *directory)</div><div class="ttdoc">Imprime todas las entradas del directorio.</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

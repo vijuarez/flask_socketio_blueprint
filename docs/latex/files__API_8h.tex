@@ -1,0 +1,272 @@
+\hypertarget{files__API_8h}{}\doxysection{Referencia del Archivo src/cr\+\_\+\+A\+P\+I/files\+\_\+\+A\+PI.h}
+\label{files__API_8h}\index{src/cr\_API/files\_API.h@{src/cr\_API/files\_API.h}}
+
+
+Declaración de los métodos para archivos de la A\+PI del C\+R\+FS.  
+
+
+\doxysubsection*{Estructuras de datos}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcr__file}{cr\+\_\+file}}
+\end{DoxyCompactItemize}
+\doxysubsection*{typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{files__API_8h_ab22a3e55bcfe17b9f5af4e719ba3f3d6}\label{files__API_8h_ab22a3e55bcfe17b9f5af4e719ba3f3d6}} 
+typedef struct \mbox{\hyperlink{structcr__file}{cr\+\_\+file}} {\bfseries cr\+F\+I\+LE}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structcr__file}{cr\+F\+I\+LE}} $\ast$ \mbox{\hyperlink{files__API_8h_ab00251270838b855477a088387ad1063}{cr\+\_\+open}} (unsigned \mbox{\hyperlink{structpartition}{partition}}, char $\ast$filename, char mode)
+\begin{DoxyCompactList}\small\item\em Función para abrir una archivo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{files__API_8h_ab800caa4665133c2c3b38e301ceea2e3}{cr\+\_\+read}} (\mbox{\hyperlink{structcr__file}{cr\+F\+I\+LE}} $\ast$file\+\_\+desc, void $\ast$buffer, int nbytes)
+\begin{DoxyCompactList}\small\item\em Función para leer datos desde un archivo a un buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{files__API_8h_a13d60bbb7589d33a4a07130f55e1874f}{cr\+\_\+write}} (\mbox{\hyperlink{structcr__file}{cr\+F\+I\+LE}} $\ast$file\+\_\+desc, void $\ast$buffer, int nbytes)
+\begin{DoxyCompactList}\small\item\em Función para escribir desde un buffer a un archivo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{files__API_8h_a4ae98cad36ee17f8bb0f2e0e1392a092}{cr\+\_\+close}} (\mbox{\hyperlink{structcr__file}{cr\+F\+I\+LE}} $\ast$file\+\_\+desc)
+\begin{DoxyCompactList}\small\item\em Función para cerrar un archivo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{files__API_8h_ac58fd32f9f993419fa76aa1937ec0c86}{cr\+\_\+rm}} (unsigned \mbox{\hyperlink{structpartition}{partition}}, char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Función para borrar un archivo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{files__API_8h_a30c000dc8272a63ce8a8c9ead5fc8a88}{cr\+\_\+hardlink}} (unsigned \mbox{\hyperlink{structpartition}{partition}}, char $\ast$orig, char $\ast$dest)
+\begin{DoxyCompactList}\small\item\em Función para crear un {\itshape hardlink} de un archivo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{files__API_8h_af8f581cce1ea5b597fec03310a34ba6d}{cr\+\_\+softlink}} (unsigned partition\+\_\+orig, unsigned partition\+\_\+dest, char $\ast$orig, char $\ast$dest)
+\begin{DoxyCompactList}\small\item\em Función para crear un {\itshape softlink} de un archivo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{files__API_8h_aa97a3e6712a71769248df9c6491071e7}{cr\+\_\+unload}} (unsigned \mbox{\hyperlink{structpartition}{partition}}, char $\ast$orig, char $\ast$dest)
+\begin{DoxyCompactList}\small\item\em Función para copiar un archivo o partición completas. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{files__API_8h_aac5bf52c1a43c918aacbb8d8d0f6267a}{cr\+\_\+load}} (unsigned \mbox{\hyperlink{structpartition}{partition}}, char $\ast$orig)
+\begin{DoxyCompactList}\small\item\em Función para copiar un archivo desde el sistema operativo al disco virtual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Declaración de los métodos para archivos de la A\+PI del C\+R\+FS. 
+
+\begin{DoxyDate}{Fecha}
+27 May 2020 Se incluyen los métodos específicos para manejar archivos del C\+R\+FS, cubriendo operaciones que podrían ser esperables para el usuario del sistema. Esta parte de la A\+PI espera que el resto del C\+R\+FS ya haya sido preparado usando las partes correspondientes de la A\+PI. 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{files__API_8h_a4ae98cad36ee17f8bb0f2e0e1392a092}\label{files__API_8h_a4ae98cad36ee17f8bb0f2e0e1392a092}} 
+\index{files\_API.h@{files\_API.h}!cr\_close@{cr\_close}}
+\index{cr\_close@{cr\_close}!files\_API.h@{files\_API.h}}
+\doxysubsubsection{\texorpdfstring{cr\_close()}{cr\_close()}}
+{\footnotesize\ttfamily int cr\+\_\+close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcr__file}{cr\+F\+I\+LE}} $\ast$}]{file\+\_\+desc }\end{DoxyParamCaption})}
+
+
+
+Función para cerrar un archivo. 
+
+Asegura que un archivo se cierra y se actualiza en disco.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em file\+\_\+desc} & El archivo en cuestión. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Retorna 0 en caso exitoso. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{files__API_8h_a30c000dc8272a63ce8a8c9ead5fc8a88}\label{files__API_8h_a30c000dc8272a63ce8a8c9ead5fc8a88}} 
+\index{files\_API.h@{files\_API.h}!cr\_hardlink@{cr\_hardlink}}
+\index{cr\_hardlink@{cr\_hardlink}!files\_API.h@{files\_API.h}}
+\doxysubsubsection{\texorpdfstring{cr\_hardlink()}{cr\_hardlink()}}
+{\footnotesize\ttfamily int cr\+\_\+hardlink (\begin{DoxyParamCaption}\item[{unsigned}]{partition,  }\item[{char $\ast$}]{orig,  }\item[{char $\ast$}]{dest }\end{DoxyParamCaption})}
+
+
+
+Función para crear un {\itshape hardlink} de un archivo. 
+
+Esta función crea un {\itshape hardlink} desde cierta dirección a un destino, aumentando la cuenta de referencias de esta.
+
+Si devuelve 0, el link se creo correctamente. Si devuelve 1, el archivo no existe. Si devuelve 2, la ruta o partición origen son inválidas. Si devuelve 3, la ruta destino es inválida.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em partition} & La partición en la que esta el archivo. \\
+\hline
+\mbox{\texttt{ in}}  & {\em orig} & El archivo en cuestión. \\
+\hline
+\mbox{\texttt{ in}}  & {\em dest} & El archivo destino. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El resultado de la operación. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{files__API_8h_aac5bf52c1a43c918aacbb8d8d0f6267a}\label{files__API_8h_aac5bf52c1a43c918aacbb8d8d0f6267a}} 
+\index{files\_API.h@{files\_API.h}!cr\_load@{cr\_load}}
+\index{cr\_load@{cr\_load}!files\_API.h@{files\_API.h}}
+\doxysubsubsection{\texorpdfstring{cr\_load()}{cr\_load()}}
+{\footnotesize\ttfamily int cr\+\_\+load (\begin{DoxyParamCaption}\item[{unsigned}]{partition,  }\item[{char $\ast$}]{orig }\end{DoxyParamCaption})}
+
+
+
+Función para copiar un archivo desde el sistema operativo al disco virtual. 
+
+Esta función intenta copiar un archivo desde el sistema operativo al disco virtual. Si el archivo es demasiado grande, se copiara hasta donde se pueda. Si es un directorio, se copiara el directorio y sus contenidos, pero no se copiaran otras carpetas de forma recursiva. Siempre se copia a la raiz de la partición.
+
+Si devuelve 0, la operación se completo correctamente. Si devuelve 1, se acabo el espacio mientras se copiaba. Si devuelve 2, el archivo origen no existe.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em partition} & La partición a donde copiar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em orig} & La ruta del archivo origen. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El estado de la operación. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{files__API_8h_ab00251270838b855477a088387ad1063}\label{files__API_8h_ab00251270838b855477a088387ad1063}} 
+\index{files\_API.h@{files\_API.h}!cr\_open@{cr\_open}}
+\index{cr\_open@{cr\_open}!files\_API.h@{files\_API.h}}
+\doxysubsubsection{\texorpdfstring{cr\_open()}{cr\_open()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcr__file}{cr\+F\+I\+LE}}$\ast$ cr\+\_\+open (\begin{DoxyParamCaption}\item[{unsigned}]{partition,  }\item[{char $\ast$}]{filename,  }\item[{char}]{mode }\end{DoxyParamCaption})}
+
+
+
+Función para abrir una archivo. 
+
+Recibe una ruta de un archivo y una partición en la que se encuentra, y luego intenta abrir ese archivo. Si el archivo no existe y el modo es {\ttfamily w}, el archivo sera creado. Si el archivo no existe y el modo es {\ttfamily r}, se devuelve {\ttfamily N\+U\+LL} y se avisa E\+N\+O\+E\+NT. Si existe y el modo es {\ttfamily r}, tan solo se carga. Si existe y el modo es {\ttfamily w}, se devuelve N\+U\+LL y se avisa por E\+E\+X\+I\+ST.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em partition} & La partición en la que se encuentra el archivo. \\
+\hline
+\mbox{\texttt{ in}}  & {\em filename} & La dirección del archivo. \\
+\hline
+\mbox{\texttt{ in}}  & {\em mode} & El modo de lectura, sea {\ttfamily w} o {\ttfamily r}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{files__API_8h_ab800caa4665133c2c3b38e301ceea2e3}\label{files__API_8h_ab800caa4665133c2c3b38e301ceea2e3}} 
+\index{files\_API.h@{files\_API.h}!cr\_read@{cr\_read}}
+\index{cr\_read@{cr\_read}!files\_API.h@{files\_API.h}}
+\doxysubsubsection{\texorpdfstring{cr\_read()}{cr\_read()}}
+{\footnotesize\ttfamily int cr\+\_\+read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcr__file}{cr\+F\+I\+LE}} $\ast$}]{file\+\_\+desc,  }\item[{void $\ast$}]{buffer,  }\item[{int}]{nbytes }\end{DoxyParamCaption})}
+
+
+
+Función para leer datos desde un archivo a un buffer. 
+
+La función intenta leer hasta {\ttfamily nbytes} desde el archivo entregado, copiando los datos al buffer. Se retornan el número de bytes que efectivamente se pudieron leer del archivo.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em file\+\_\+desc} & El archivo a leer. \\
+\hline
+\mbox{\texttt{ in}}  & {\em buffer} & La array donde copiar los datos, debe ser al menos nbytes de largo. \\
+\hline
+\mbox{\texttt{ in}}  & {\em nbytes} & El número de bytes a leer desde el archivo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El número de bytes que efectivamente se leyeron del archivo. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{files__API_8h_ac58fd32f9f993419fa76aa1937ec0c86}\label{files__API_8h_ac58fd32f9f993419fa76aa1937ec0c86}} 
+\index{files\_API.h@{files\_API.h}!cr\_rm@{cr\_rm}}
+\index{cr\_rm@{cr\_rm}!files\_API.h@{files\_API.h}}
+\doxysubsubsection{\texorpdfstring{cr\_rm()}{cr\_rm()}}
+{\footnotesize\ttfamily int cr\+\_\+rm (\begin{DoxyParamCaption}\item[{unsigned}]{partition,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Función para borrar un archivo. 
+
+Elimina un archivo por su dirección en el disco, liberando los bloques asociados a este. Notese que esta función no necesita que el archivo se cargue, solo se necesita su dirección.
+
+Si devuelve 0, el archivo se elimino correctamente. Si devuelve 1, el archivo no existe. Si devuelve 2, la ruta o partición son inválidas.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em partition} & La partición en la que esta el archivo. \\
+\hline
+\mbox{\texttt{ in}}  & {\em filename} & El archivo en cuestión. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El resultado de la eliminación. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{files__API_8h_af8f581cce1ea5b597fec03310a34ba6d}\label{files__API_8h_af8f581cce1ea5b597fec03310a34ba6d}} 
+\index{files\_API.h@{files\_API.h}!cr\_softlink@{cr\_softlink}}
+\index{cr\_softlink@{cr\_softlink}!files\_API.h@{files\_API.h}}
+\doxysubsubsection{\texorpdfstring{cr\_softlink()}{cr\_softlink()}}
+{\footnotesize\ttfamily int cr\+\_\+softlink (\begin{DoxyParamCaption}\item[{unsigned}]{partition\+\_\+orig,  }\item[{unsigned}]{partition\+\_\+dest,  }\item[{char $\ast$}]{orig,  }\item[{char $\ast$}]{dest }\end{DoxyParamCaption})}
+
+
+
+Función para crear un {\itshape softlink} de un archivo. 
+
+Esta función crea un {\itshape softlink} desde una dirección a un destino, pero a diferencia del {\itshape hardlink} este no aumenta las referencias y puede ser de una partición a otra.
+
+Si devuelve 0, el link se creo correctamente. Si devuelve 1, el archivo origen no existe. Si devuelve 2, la ruta o partición origen son inválidas. Si devuelve 3, la ruta o partición destino son inválidas.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em partition\+\_\+orig} & La partición en la que esta el archivo origen. \\
+\hline
+\mbox{\texttt{ in}}  & {\em partition\+\_\+dest} & La partición del destino. \\
+\hline
+\mbox{\texttt{ in}}  & {\em orig} & La ruta del archivo origen. \\
+\hline
+\mbox{\texttt{ in}}  & {\em dest} & La ruta del destino. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El resultado de la operación. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{files__API_8h_aa97a3e6712a71769248df9c6491071e7}\label{files__API_8h_aa97a3e6712a71769248df9c6491071e7}} 
+\index{files\_API.h@{files\_API.h}!cr\_unload@{cr\_unload}}
+\index{cr\_unload@{cr\_unload}!files\_API.h@{files\_API.h}}
+\doxysubsubsection{\texorpdfstring{cr\_unload()}{cr\_unload()}}
+{\footnotesize\ttfamily int cr\+\_\+unload (\begin{DoxyParamCaption}\item[{unsigned}]{partition,  }\item[{char $\ast$}]{orig,  }\item[{char $\ast$}]{dest }\end{DoxyParamCaption})}
+
+
+
+Función para copiar un archivo o partición completas. 
+
+Esta función se encarga de copiar ya sea un archivo, una partición o el disco completo a cierto destino en el sistema operativo normal. Si la partition es {\ttfamily 0}, se copiara el disco entero. Por otra parte, si el orig es {\ttfamily N\+U\+LL}, se copiara la partition entera, pudiendo esta ser el disco.
+
+Si devuelve 0, la operación se completo correctamente. Si devuelve 1, la ruta o partición origen son inválidas. Si devuelve 2, ocurrio un error desconocido y aplican las reglas de la A\+PI de escritura de C.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em partition} & La partición de donde copiar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em orig} & La ruta que copiar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em dest} & La ruta en la que escribir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El resultado de la operación. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{files__API_8h_a13d60bbb7589d33a4a07130f55e1874f}\label{files__API_8h_a13d60bbb7589d33a4a07130f55e1874f}} 
+\index{files\_API.h@{files\_API.h}!cr\_write@{cr\_write}}
+\index{cr\_write@{cr\_write}!files\_API.h@{files\_API.h}}
+\doxysubsubsection{\texorpdfstring{cr\_write()}{cr\_write()}}
+{\footnotesize\ttfamily int cr\+\_\+write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcr__file}{cr\+F\+I\+LE}} $\ast$}]{file\+\_\+desc,  }\item[{void $\ast$}]{buffer,  }\item[{int}]{nbytes }\end{DoxyParamCaption})}
+
+
+
+Función para escribir desde un buffer a un archivo. 
+
+Esta función permite escribir {\ttfamily nbytes} desde el buffer entregado hasta cierto archivo. La función indica cuantos bytes efectivamente pudo escribir.
+
+En caso de que el disco este lleno, la función devuelve -\/1. En caso de que el archivo no pueda crecer, devuelve -\/2.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em file\+\_\+desc} & El archivo en cuestión. \\
+\hline
+\mbox{\texttt{ in}}  & {\em buffer} & El buffer con los datos. \\
+\hline
+\mbox{\texttt{ in}}  & {\em nbytes} & La cantidad de bytes a escribir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+La cantidad de bytes escritos, puede indicar error. 
+\end{DoxyReturn}

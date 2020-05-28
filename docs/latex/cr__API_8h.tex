@@ -1,0 +1,123 @@
+\hypertarget{cr__API_8h}{}\doxysection{Referencia del Archivo src/cr\+\_\+\+A\+P\+I/cr\+\_\+\+A\+PI.h}
+\label{cr__API_8h}\index{src/cr\_API/cr\_API.h@{src/cr\_API/cr\_API.h}}
+
+
+Declaración de los métodos generales de la A\+PI del C\+R\+FS.  
+
+
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../file\+System/directory.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../file\+System/disk.\+h\char`\"{}}\newline
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{cr__API_8h_a1cd93f34458d326c02d81fd2e89e8fd8}{cr\+\_\+mount}} (char $\ast$diskname)
+\begin{DoxyCompactList}\small\item\em Funcion para montar el disco. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{cr__API_8h_abe3d6ca209b04593b4f8e81ec5f371b2}{cr\+\_\+bitmap}} (unsigned partition\+\_\+uid, bool hex)
+\begin{DoxyCompactList}\small\item\em Funcion para imprimir el bitmap. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cr__API_8h_a8787b7666153f825dc4e56b9cb25af4a}{cr\+\_\+exists}} (unsigned partition\+\_\+uid, char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Determina si existe un archivo en cierta particion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{cr__API_8h_a42dc0a184da55f93f71e7a3c6df06965}{cr\+\_\+ls}} (unsigned partition\+\_\+uid)
+\begin{DoxyCompactList}\small\item\em Lista los elementos de un disco a {\ttfamily stdout}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{cr__API_8h_a2e94397c2a95d98828c4b5c4865eec79}\label{cr__API_8h_a2e94397c2a95d98828c4b5c4865eec79}} 
+char $\ast$ \mbox{\hyperlink{cr__API_8h_a2e94397c2a95d98828c4b5c4865eec79}{disk\+\_\+path}}
+\begin{DoxyCompactList}\small\item\em Ruta del disco virtual. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{cr__API_8h_ae13f8d050cee3dc02da46e5aa65087fe}\label{cr__API_8h_ae13f8d050cee3dc02da46e5aa65087fe}} 
+\mbox{\hyperlink{structvirtual__disk}{Disk}} $\ast$ \mbox{\hyperlink{cr__API_8h_ae13f8d050cee3dc02da46e5aa65087fe}{loaded\+\_\+disk}}
+\begin{DoxyCompactList}\small\item\em Representación del disco en memoria. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Declaración de los métodos generales de la A\+PI del C\+R\+FS. 
+
+\begin{DoxyDate}{Fecha}
+27 May 2020 Se incluyen los métodos para preparar el sistema de archivos y realizar operaciones de bajo nivel, dejando operaciones más sofisticadas que se aplican a nivel de archivo a otras parte de la A\+PI. 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{cr__API_8h_abe3d6ca209b04593b4f8e81ec5f371b2}\label{cr__API_8h_abe3d6ca209b04593b4f8e81ec5f371b2}} 
+\index{cr\_API.h@{cr\_API.h}!cr\_bitmap@{cr\_bitmap}}
+\index{cr\_bitmap@{cr\_bitmap}!cr\_API.h@{cr\_API.h}}
+\doxysubsubsection{\texorpdfstring{cr\_bitmap()}{cr\_bitmap()}}
+{\footnotesize\ttfamily void cr\+\_\+bitmap (\begin{DoxyParamCaption}\item[{unsigned}]{partition\+\_\+uid,  }\item[{bool}]{hex }\end{DoxyParamCaption})}
+
+
+
+Funcion para imprimir el bitmap. 
+
+Se imprime a {\ttfamily stderr} el estado actual del disco indicado, ya sea en hexadecimal o binario. Se puede indicar el {\ttfamily partition} 0 para ver el bitmap completo.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em partition\+\_\+uid} & Indice de la partición a revisar, partiendo desde 1. Si es 0, se imprimen todos. \\
+\hline
+\mbox{\texttt{ in}}  & {\em hex} & Si se imprime el bitmap en formato hexadecimal o, por el contrario, binario. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{cr__API_8h_a8787b7666153f825dc4e56b9cb25af4a}\label{cr__API_8h_a8787b7666153f825dc4e56b9cb25af4a}} 
+\index{cr\_API.h@{cr\_API.h}!cr\_exists@{cr\_exists}}
+\index{cr\_exists@{cr\_exists}!cr\_API.h@{cr\_API.h}}
+\doxysubsubsection{\texorpdfstring{cr\_exists()}{cr\_exists()}}
+{\footnotesize\ttfamily int cr\+\_\+exists (\begin{DoxyParamCaption}\item[{unsigned}]{partition\+\_\+uid,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Determina si existe un archivo en cierta particion. 
+
+A diferencia de {\ttfamily cr\+\_\+bitmap}, esta funcion no permite buscar en todas las particiones. (\href{https://github
+.com/IIC2333/Foro-2020-1/issues/63}{\texttt{ Fuente}})
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em partition\+\_\+uid} & Indice de la partición a revisar, partiendo desde 1. \\
+\hline
+\mbox{\texttt{ in}}  & {\em filename} & El nombre del archivo en cuestion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+1 si el archivo existe, 0 si no existe. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cr__API_8h_a42dc0a184da55f93f71e7a3c6df06965}\label{cr__API_8h_a42dc0a184da55f93f71e7a3c6df06965}} 
+\index{cr\_API.h@{cr\_API.h}!cr\_ls@{cr\_ls}}
+\index{cr\_ls@{cr\_ls}!cr\_API.h@{cr\_API.h}}
+\doxysubsubsection{\texorpdfstring{cr\_ls()}{cr\_ls()}}
+{\footnotesize\ttfamily void cr\+\_\+ls (\begin{DoxyParamCaption}\item[{unsigned}]{partition\+\_\+uid }\end{DoxyParamCaption})}
+
+
+
+Lista los elementos de un disco a {\ttfamily stdout}. 
+
+A diferencia de {\ttfamily cr\+\_\+bitmap}, esta funcion no permite listar todas las particiones. (\href{https://github
+.com/IIC2333/Foro-2020-1/issues/63}{\texttt{ Fuente}})
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em partition\+\_\+uid} & Indice de la partición a revisar, partiendo desde 1. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{cr__API_8h_a1cd93f34458d326c02d81fd2e89e8fd8}\label{cr__API_8h_a1cd93f34458d326c02d81fd2e89e8fd8}} 
+\index{cr\_API.h@{cr\_API.h}!cr\_mount@{cr\_mount}}
+\index{cr\_mount@{cr\_mount}!cr\_API.h@{cr\_API.h}}
+\doxysubsubsection{\texorpdfstring{cr\_mount()}{cr\_mount()}}
+{\footnotesize\ttfamily int cr\+\_\+mount (\begin{DoxyParamCaption}\item[{char $\ast$}]{diskname }\end{DoxyParamCaption})}
+
+
+
+Funcion para montar el disco. 
+
+Instancia la variable global {\ttfamily disk\+\_\+path} con la ruta donde se encuentra el archivo .bin correspondiente al disco.
+
+Si retorna 0, la operación se completo correctamente. En caso contrario, ocurrio un error.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em diskname} & Nombre del archivo disco virtual \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Estado de la operación 
+\end{DoxyReturn}

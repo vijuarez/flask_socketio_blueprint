@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Cristian Ruz File System: Referencia del Archivo src/fileSystem/directory.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Cristian Ruz File System
+   </div>
+   <div id="projectbrief">Proyecto 1 - Sistemas Operativos y Redes</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_63fde36204e32b08dfdf7d1cf2e83767.html">fileSystem</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Estructuras de datos</a> &#124;
+<a href="#typedef-members">typedefs</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo directory.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Declaración de los métodos para manejo de directorios en el CRFS.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="index_8h_source.html">index.h</a>&quot;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+</div>
+<p><a href="directory_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Estructuras de datos</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdirectory__entry.html">directory_entry</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representación de un directorio u archivo.  <a href="structdirectory__entry.html#details">Más...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdirectory__block.html">directory_block</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representación de un bloque directorio.  <a href="structdirectory__block.html#details">Más...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+typedefs</h2></td></tr>
+<tr class="memitem:ab121a5ed66e07f5eae659e79d3cab19c"><td class="memItemLeft" align="right" valign="top"><a id="ab121a5ed66e07f5eae659e79d3cab19c"></a>
+typedef struct <a class="el" href="structdirectory__entry.html">directory_entry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="directory_8h.html#ab121a5ed66e07f5eae659e79d3cab19c">Entry</a></td></tr>
+<tr class="memdesc:ab121a5ed66e07f5eae659e79d3cab19c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representación de un directorio u archivo. <br /></td></tr>
+<tr class="separator:ab121a5ed66e07f5eae659e79d3cab19c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8a73f7447e66867e5653d9d60401e20"><td class="memItemLeft" align="right" valign="top"><a id="ad8a73f7447e66867e5653d9d60401e20"></a>
+typedef struct <a class="el" href="structdirectory__block.html">directory_block</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="directory_8h.html#ad8a73f7447e66867e5653d9d60401e20">DirectoryBlock</a></td></tr>
+<tr class="memdesc:ad8a73f7447e66867e5653d9d60401e20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representación de un bloque directorio. <br /></td></tr>
+<tr class="separator:ad8a73f7447e66867e5653d9d60401e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a02e906284f2c1eab40d145fe4ed4cd34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="directory_8h.html#ad8a73f7447e66867e5653d9d60401e20">DirectoryBlock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="directory_8h.html#a02e906284f2c1eab40d145fe4ed4cd34">directory_init</a> (unsigned char *block, int uid)</td></tr>
+<tr class="memdesc:a02e906284f2c1eab40d145fe4ed4cd34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función para instanciar un bloque de directorio.  <a href="directory_8h.html#a02e906284f2c1eab40d145fe4ed4cd34">Más...</a><br /></td></tr>
+<tr class="separator:a02e906284f2c1eab40d145fe4ed4cd34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6de19bea79cca65c965eddb83dc0a1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="directory_8h.html#ac6de19bea79cca65c965eddb83dc0a1f">new_entry</a> (<a class="el" href="directory_8h.html#ad8a73f7447e66867e5653d9d60401e20">DirectoryBlock</a> *directory, unsigned int index_uid, unsigned int valid, char *name)</td></tr>
+<tr class="memdesc:ac6de19bea79cca65c965eddb83dc0a1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserta una nueva entrada al directorio.  <a href="directory_8h.html#ac6de19bea79cca65c965eddb83dc0a1f">Más...</a><br /></td></tr>
+<tr class="separator:ac6de19bea79cca65c965eddb83dc0a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1e6696d988d3c1724de509c57edaa83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="directory_8h.html#ac1e6696d988d3c1724de509c57edaa83">print_entries</a> (<a class="el" href="directory_8h.html#ad8a73f7447e66867e5653d9d60401e20">DirectoryBlock</a> *directory)</td></tr>
+<tr class="memdesc:ac1e6696d988d3c1724de509c57edaa83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime todas las entradas del directorio.  <a href="directory_8h.html#ac1e6696d988d3c1724de509c57edaa83">Más...</a><br /></td></tr>
+<tr class="separator:ac1e6696d988d3c1724de509c57edaa83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa4be76956a7b1bb82b372efeada4977"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="directory_8h.html#aaa4be76956a7b1bb82b372efeada4977">free_directory</a> (<a class="el" href="directory_8h.html#ad8a73f7447e66867e5653d9d60401e20">DirectoryBlock</a> *directory)</td></tr>
+<tr class="memdesc:aaa4be76956a7b1bb82b372efeada4977"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libera todos los recursos asociados al bloque directorio.  <a href="directory_8h.html#aaa4be76956a7b1bb82b372efeada4977">Más...</a><br /></td></tr>
+<tr class="separator:aaa4be76956a7b1bb82b372efeada4977"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1964ae468028aa89baf3ed2f2af57ba7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="directory_8h.html#a1964ae468028aa89baf3ed2f2af57ba7">free_entry</a> (<a class="el" href="directory_8h.html#ab121a5ed66e07f5eae659e79d3cab19c">Entry</a> *entry)</td></tr>
+<tr class="memdesc:a1964ae468028aa89baf3ed2f2af57ba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libera todos los recursos asociados una entrada del directorio.  <a href="directory_8h.html#a1964ae468028aa89baf3ed2f2af57ba7">Más...</a><br /></td></tr>
+<tr class="separator:a1964ae468028aa89baf3ed2f2af57ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa299edce2f4dc9999bb9f1917b3baf0a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="directory_8h.html#aa299edce2f4dc9999bb9f1917b3baf0a">exists_file</a> (<a class="el" href="directory_8h.html#ad8a73f7447e66867e5653d9d60401e20">DirectoryBlock</a> *directory, char *file_name)</td></tr>
+<tr class="memdesc:aa299edce2f4dc9999bb9f1917b3baf0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica la existencia de un archivo en cierto directorio.  <a href="directory_8h.html#aa299edce2f4dc9999bb9f1917b3baf0a">Más...</a><br /></td></tr>
+<tr class="separator:aa299edce2f4dc9999bb9f1917b3baf0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Declaración de los métodos para manejo de directorios en el CRFS. </p>
+<dl class="section date"><dt>Fecha</dt><dd>27 May 2020 Se incluyen los métodos y representaciones para manejar directorios en el CRFS. Estos métodos son de bajo nivel, y no se espera que el usuario interactue con ellos, deben usarse por debajo de una API. </dd></dl>
+</div><h2 class="groupheader">Documentación de las funciones</h2>
+<a id="a02e906284f2c1eab40d145fe4ed4cd34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02e906284f2c1eab40d145fe4ed4cd34">&#9670;&nbsp;</a></span>directory_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="directory_8h.html#ad8a73f7447e66867e5653d9d60401e20">DirectoryBlock</a>* directory_init </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>block</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>uid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función para instanciar un bloque de directorio. </p>
+<p>Esta función recibe un array de integers, los cuales son interpretados como un un bloque de directorio. El primer bit indica la validez del bloque, los siguientes 23 bit indican la posición del bloque índice del archivo, y los siguientes 29 bytes el nombre del archivo, encodeado en ASCII y padeado con <code>0x00</code>.</p>
+<p>Si el array no es válido, se devuelve un puntero NULL.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">block</td><td>La array de caracteres a interpretar. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">uid</td><td>El identificador del bloque a instanciar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Un puntero al bloque instanciado. </dd></dl>
+
+</div>
+</div>
+<a id="aa299edce2f4dc9999bb9f1917b3baf0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa299edce2f4dc9999bb9f1917b3baf0a">&#9670;&nbsp;</a></span>exists_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool exists_file </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="directory_8h.html#ad8a73f7447e66867e5653d9d60401e20">DirectoryBlock</a> *&#160;</td>
+          <td class="paramname"><em>directory</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>file_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica la existencia de un archivo en cierto directorio. </p>
+<p>Se revisan las entradas de un directorio, buscando una con el nombre entregado.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">directory</td><td>El directorio donde buscar. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">file_name[in]</td><td>El nombre del archivo buscado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Si el archivo esta o no. </dd></dl>
+
+</div>
+</div>
+<a id="aaa4be76956a7b1bb82b372efeada4977"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa4be76956a7b1bb82b372efeada4977">&#9670;&nbsp;</a></span>free_directory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_directory </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="directory_8h.html#ad8a73f7447e66867e5653d9d60401e20">DirectoryBlock</a> *&#160;</td>
+          <td class="paramname"><em>directory</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Libera todos los recursos asociados al bloque directorio. </p>
+<p>Se liberan los recursos asociados a la representación de un directorio. No se maneja la actualización en disco del disco virtual, esto debe manejarse de forma aparte.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">directory</td><td>El directorio en cuestión. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1964ae468028aa89baf3ed2f2af57ba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1964ae468028aa89baf3ed2f2af57ba7">&#9670;&nbsp;</a></span>free_entry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_entry </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="directory_8h.html#ab121a5ed66e07f5eae659e79d3cab19c">Entry</a> *&#160;</td>
+          <td class="paramname"><em>entry</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Libera todos los recursos asociados una entrada del directorio. </p>
+<p>Se liberan los recursos asociados a la representación de una entrada. No se maneja la actualización en disco del disco virtual, esto debe manejarse de forma aparte.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">entry</td><td>La entrada en cuestión. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac6de19bea79cca65c965eddb83dc0a1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6de19bea79cca65c965eddb83dc0a1f">&#9670;&nbsp;</a></span>new_entry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void new_entry </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="directory_8h.html#ad8a73f7447e66867e5653d9d60401e20">DirectoryBlock</a> *&#160;</td>
+          <td class="paramname"><em>directory</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>index_uid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>valid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inserta una nueva entrada al directorio. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">directory</td><td>El directorio donde agregar la entrada. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">index_uid</td><td>La dirección del bloque índice de la entrada. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">valid</td><td>La validez del bloque. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>El nombre de la entrada. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac1e6696d988d3c1724de509c57edaa83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1e6696d988d3c1724de509c57edaa83">&#9670;&nbsp;</a></span>print_entries()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_entries </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="directory_8h.html#ad8a73f7447e66867e5653d9d60401e20">DirectoryBlock</a> *&#160;</td>
+          <td class="paramname"><em>directory</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imprime todas las entradas del directorio. </p>
+<p>Imprime a <code>stdout</code> todas las entradas en un directorio.</p>
+<p>TODO: Agregar output de ejemplo</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">directory</td><td>El directorio en cuestión. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

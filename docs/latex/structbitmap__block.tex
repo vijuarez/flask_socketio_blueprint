@@ -1,0 +1,57 @@
+\hypertarget{structbitmap__block}{}\doxysection{Referencia de la Estructura bitmap\+\_\+block}
+\label{structbitmap__block}\index{bitmap\_block@{bitmap\_block}}
+
+
+Representación de un bloque bitmap.  
+
+
+
+
+{\ttfamily \#include $<$bitmap.\+h$>$}
+
+\doxysubsection*{Campos de datos}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structbitmap__block_a60a34315f460179939054acaf3ed8163}{uid}}
+\item 
+int $\ast$ \mbox{\hyperlink{structbitmap__block_a8fef0c04bfabe0802823a1472a054155}{bits}}
+\item 
+int \mbox{\hyperlink{structbitmap__block_aeaea1bd83433f49ec9d96024e03ddbc9}{count\+\_\+busy}}
+\item 
+int \mbox{\hyperlink{structbitmap__block_a41280315ea6c2f8a3a93ace9cc74d2fa}{count\+\_\+free}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representación de un bloque bitmap. 
+
+\doxysubsection{Documentación de los campos}
+\mbox{\Hypertarget{structbitmap__block_a8fef0c04bfabe0802823a1472a054155}\label{structbitmap__block_a8fef0c04bfabe0802823a1472a054155}} 
+\index{bitmap\_block@{bitmap\_block}!bits@{bits}}
+\index{bits@{bits}!bitmap\_block@{bitmap\_block}}
+\doxysubsubsection{\texorpdfstring{bits}{bits}}
+{\footnotesize\ttfamily int$\ast$ bits}
+
+Array de bits por cada bloque, es decir, 65536 bits (bloques en cada particion) \mbox{\Hypertarget{structbitmap__block_aeaea1bd83433f49ec9d96024e03ddbc9}\label{structbitmap__block_aeaea1bd83433f49ec9d96024e03ddbc9}} 
+\index{bitmap\_block@{bitmap\_block}!count\_busy@{count\_busy}}
+\index{count\_busy@{count\_busy}!bitmap\_block@{bitmap\_block}}
+\doxysubsubsection{\texorpdfstring{count\_busy}{count\_busy}}
+{\footnotesize\ttfamily int count\+\_\+busy}
+
+Cantidad de bloques ocupados \mbox{\Hypertarget{structbitmap__block_a41280315ea6c2f8a3a93ace9cc74d2fa}\label{structbitmap__block_a41280315ea6c2f8a3a93ace9cc74d2fa}} 
+\index{bitmap\_block@{bitmap\_block}!count\_free@{count\_free}}
+\index{count\_free@{count\_free}!bitmap\_block@{bitmap\_block}}
+\doxysubsubsection{\texorpdfstring{count\_free}{count\_free}}
+{\footnotesize\ttfamily int count\+\_\+free}
+
+Cantidad de bloques ocupados \mbox{\Hypertarget{structbitmap__block_a60a34315f460179939054acaf3ed8163}\label{structbitmap__block_a60a34315f460179939054acaf3ed8163}} 
+\index{bitmap\_block@{bitmap\_block}!uid@{uid}}
+\index{uid@{uid}!bitmap\_block@{bitmap\_block}}
+\doxysubsubsection{\texorpdfstring{uid}{uid}}
+{\footnotesize\ttfamily int uid}
+
+Número secuencial, almacenado en un unsigned int de 4Bytes (32Bits) 
+
+La documentación para esta estructura fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+src/file\+System/\mbox{\hyperlink{bitmap_8h}{bitmap.\+h}}\end{DoxyCompactItemize}

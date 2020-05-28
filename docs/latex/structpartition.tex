@@ -1,0 +1,49 @@
+\hypertarget{structpartition}{}\doxysection{Referencia de la Estructura partition}
+\label{structpartition}\index{partition@{partition}}
+
+
+Representación de una partición.  
+
+
+
+
+{\ttfamily \#include $<$partition.\+h$>$}
+
+\doxysubsection*{Campos de datos}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structpartition_a60a34315f460179939054acaf3ed8163}{uid}}
+\item 
+\mbox{\hyperlink{directory_8h_ad8a73f7447e66867e5653d9d60401e20}{Directory\+Block}} $\ast$ \mbox{\hyperlink{structpartition_a9eb494e561ab0177e93faed0ee74f1fa}{directory}}
+\item 
+\mbox{\hyperlink{bitmap_8h_ab958f885f250e4b41b61f90d28bc7f8c}{Bitmap\+Block}} $\ast$ \mbox{\hyperlink{structpartition_ae793ffcca10df7a3a450d6d0c2085ea9}{bitmap}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representación de una partición. 
+
+\doxysubsection{Documentación de los campos}
+\mbox{\Hypertarget{structpartition_ae793ffcca10df7a3a450d6d0c2085ea9}\label{structpartition_ae793ffcca10df7a3a450d6d0c2085ea9}} 
+\index{partition@{partition}!bitmap@{bitmap}}
+\index{bitmap@{bitmap}!partition@{partition}}
+\doxysubsubsection{\texorpdfstring{bitmap}{bitmap}}
+{\footnotesize\ttfamily \mbox{\hyperlink{bitmap_8h_ab958f885f250e4b41b61f90d28bc7f8c}{Bitmap\+Block}}$\ast$ bitmap}
+
+Puntero a un bloque bitmap \mbox{\Hypertarget{structpartition_a9eb494e561ab0177e93faed0ee74f1fa}\label{structpartition_a9eb494e561ab0177e93faed0ee74f1fa}} 
+\index{partition@{partition}!directory@{directory}}
+\index{directory@{directory}!partition@{partition}}
+\doxysubsubsection{\texorpdfstring{directory}{directory}}
+{\footnotesize\ttfamily \mbox{\hyperlink{directory_8h_ad8a73f7447e66867e5653d9d60401e20}{Directory\+Block}}$\ast$ directory}
+
+Puntero a un bloque directorio \mbox{\Hypertarget{structpartition_a60a34315f460179939054acaf3ed8163}\label{structpartition_a60a34315f460179939054acaf3ed8163}} 
+\index{partition@{partition}!uid@{uid}}
+\index{uid@{uid}!partition@{partition}}
+\doxysubsubsection{\texorpdfstring{uid}{uid}}
+{\footnotesize\ttfamily int uid}
+
+Número unico de la particion 
+
+La documentación para esta estructura fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+src/file\+System/\mbox{\hyperlink{partition_8h}{partition.\+h}}\end{DoxyCompactItemize}

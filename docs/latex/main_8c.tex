@@ -1,0 +1,58 @@
+\hypertarget{main_8c}{}\doxysection{Referencia del Archivo src/crfs/main.c}
+\label{main_8c}\index{src/crfs/main.c@{src/crfs/main.c}}
+
+
+Programa principal del C\+R\+FS.  
+
+
+{\ttfamily \#include \char`\"{}../cr\+\_\+\+A\+P\+I/cr\+\_\+\+A\+P\+I.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Ejecución principal del C\+R\+FS. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_ae13f8d050cee3dc02da46e5aa65087fe}\label{main_8c_ae13f8d050cee3dc02da46e5aa65087fe}} 
+\mbox{\hyperlink{structvirtual__disk}{Disk}} $\ast$ \mbox{\hyperlink{main_8c_ae13f8d050cee3dc02da46e5aa65087fe}{loaded\+\_\+disk}}
+\begin{DoxyCompactList}\small\item\em Representación del disco en memoria. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8c_a2e94397c2a95d98828c4b5c4865eec79}\label{main_8c_a2e94397c2a95d98828c4b5c4865eec79}} 
+char $\ast$ \mbox{\hyperlink{main_8c_a2e94397c2a95d98828c4b5c4865eec79}{disk\+\_\+path}}
+\begin{DoxyCompactList}\small\item\em Ruta del disco virtual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Programa principal del C\+R\+FS. 
+
+\begin{DoxyDate}{Fecha}
+27 May 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Ejecución principal del C\+R\+FS. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em argc} & Número de argumentos, deben ser 2. \\
+\hline
+{\em argv} & Argumentos, debe ser el default y el nombre del disco virtual \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El resultado de la operación. 
+\end{DoxyReturn}

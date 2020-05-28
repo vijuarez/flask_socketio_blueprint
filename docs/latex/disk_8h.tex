@@ -1,0 +1,120 @@
+\hypertarget{disk_8h}{}\doxysection{Referencia del Archivo src/file\+System/disk.h}
+\label{disk_8h}\index{src/fileSystem/disk.h@{src/fileSystem/disk.h}}
+
+
+Declaración de los métodos para representación de disco en el C\+R\+FS.  
+
+
+{\ttfamily \#include \char`\"{}partition.\+h\char`\"{}}\newline
+\doxysubsection*{Estructuras de datos}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdisk}{disk}}
+\end{DoxyCompactItemize}
+\doxysubsection*{defines}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{disk_8h_a453cc933227b48776a8d405242576f38}\label{disk_8h_a453cc933227b48776a8d405242576f38}} 
+\#define \mbox{\hyperlink{disk_8h_a453cc933227b48776a8d405242576f38}{B\+L\+O\+C\+K\+S\+\_\+\+C\+O\+U\+NT}}~262144
+\begin{DoxyCompactList}\small\item\em Numero de bloques en el disco. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{disk_8h_a6b20d41d6252e9871430c242cb1a56e7}\label{disk_8h_a6b20d41d6252e9871430c242cb1a56e7}} 
+\#define \mbox{\hyperlink{disk_8h_a6b20d41d6252e9871430c242cb1a56e7}{B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}}~8192
+\begin{DoxyCompactList}\small\item\em Tamaño de cada bloque. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{disk_8h_ad3d3ffd91206adf249d3318930f024af}\label{disk_8h_ad3d3ffd91206adf249d3318930f024af}} 
+\#define \mbox{\hyperlink{disk_8h_ad3d3ffd91206adf249d3318930f024af}{P\+A\+R\+T\+I\+T\+I\+O\+N\+\_\+\+C\+O\+U\+NT}}~4
+\begin{DoxyCompactList}\small\item\em Numero de particiones en el disco. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structdisk}{disk}} \mbox{\hyperlink{disk_8h_a092d312f9c3a96c33fed06a3f0160223}{Disk}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{disk_8h_a092d312f9c3a96c33fed06a3f0160223}{Disk}} $\ast$ \mbox{\hyperlink{disk_8h_abbc45893c2dd8402a6f06949ba4296b8}{init\+\_\+disk}} (char $\ast$\mbox{\hyperlink{cr__API_8h_a2e94397c2a95d98828c4b5c4865eec79}{disk\+\_\+path}})
+\begin{DoxyCompactList}\small\item\em Función para cargar un disco en memoria. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{disk_8h_abbc664127dcbb6d86ffbdbf8e09c51c8}{update\+\_\+disk}} (\mbox{\hyperlink{disk_8h_a092d312f9c3a96c33fed06a3f0160223}{Disk}} $\ast$\mbox{\hyperlink{structdisk}{disk}}, char $\ast$\mbox{\hyperlink{cr__API_8h_a2e94397c2a95d98828c4b5c4865eec79}{disk\+\_\+path}})
+\begin{DoxyCompactList}\small\item\em Función para actualizar un disco virtual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{disk_8h_a86430b5dadf598d711b8ff3e9e8f8f63}{free\+\_\+disk}} (\mbox{\hyperlink{disk_8h_a092d312f9c3a96c33fed06a3f0160223}{Disk}} $\ast$\mbox{\hyperlink{structdisk}{disk}})
+\begin{DoxyCompactList}\small\item\em Función para liberar la memoria usada por un disco. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Declaración de los métodos para representación de disco en el C\+R\+FS. 
+
+\begin{DoxyDate}{Fecha}
+28 May 2020 Se incluyen los métodos para manejar un disco virtual entero en el C\+R\+FS, incluyendo representación e inicialización de este. Este conjunto de funciones son esenciales para preparar al C\+R\+FS para otras operaciones más sofisticadas. 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentación de los \textquotesingle{}typedefs\textquotesingle{}}
+\mbox{\Hypertarget{disk_8h_a092d312f9c3a96c33fed06a3f0160223}\label{disk_8h_a092d312f9c3a96c33fed06a3f0160223}} 
+\index{disk.h@{disk.h}!Disk@{Disk}}
+\index{Disk@{Disk}!disk.h@{disk.h}}
+\doxysubsubsection{\texorpdfstring{Disk}{Disk}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structdisk}{disk}} \mbox{\hyperlink{disk_8h_a092d312f9c3a96c33fed06a3f0160223}{Disk}}}
+
+Representación de un disco virtual. 
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{disk_8h_a86430b5dadf598d711b8ff3e9e8f8f63}\label{disk_8h_a86430b5dadf598d711b8ff3e9e8f8f63}} 
+\index{disk.h@{disk.h}!free\_disk@{free\_disk}}
+\index{free\_disk@{free\_disk}!disk.h@{disk.h}}
+\doxysubsubsection{\texorpdfstring{free\_disk()}{free\_disk()}}
+{\footnotesize\ttfamily void free\+\_\+disk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{disk_8h_a092d312f9c3a96c33fed06a3f0160223}{Disk}} $\ast$}]{disk }\end{DoxyParamCaption})}
+
+
+
+Función para liberar la memoria usada por un disco. 
+
+Esta función se encarga de liberar la memoria utilizada por una representación de un disco, descargando el disco por completo. Notese que esta función {\bfseries{no actualiza el disco}}, solo se encarga de liberarlo.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in,out}}  & {\em disk} & El puntero del disco a liberar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{disk_8h_abbc45893c2dd8402a6f06949ba4296b8}\label{disk_8h_abbc45893c2dd8402a6f06949ba4296b8}} 
+\index{disk.h@{disk.h}!init\_disk@{init\_disk}}
+\index{init\_disk@{init\_disk}!disk.h@{disk.h}}
+\doxysubsubsection{\texorpdfstring{init\_disk()}{init\_disk()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{disk_8h_a092d312f9c3a96c33fed06a3f0160223}{Disk}}$\ast$ init\+\_\+disk (\begin{DoxyParamCaption}\item[{char $\ast$}]{disk\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Función para cargar un disco en memoria. 
+
+Esta función recibe la dirección de un disco virtual, la cual es cargada en memoria como el sujeto para el C\+R\+FS. La totalidad del disco es cargado en memoria, y este se actualiza en el disco duro una vez el sistema termine su operación.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em disk\+\_\+path} & La ruta del disco virtual. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Un puntero a la representación del disco. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{disk_8h_abbc664127dcbb6d86ffbdbf8e09c51c8}\label{disk_8h_abbc664127dcbb6d86ffbdbf8e09c51c8}} 
+\index{disk.h@{disk.h}!update\_disk@{update\_disk}}
+\index{update\_disk@{update\_disk}!disk.h@{disk.h}}
+\doxysubsubsection{\texorpdfstring{update\_disk()}{update\_disk()}}
+{\footnotesize\ttfamily int update\+\_\+disk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{disk_8h_a092d312f9c3a96c33fed06a3f0160223}{Disk}} $\ast$}]{disk,  }\item[{char $\ast$}]{disk\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Función para actualizar un disco virtual. 
+
+Esta función se encarga de copiar el estado actual del C\+R\+FS a un disco virtual. Esta operación puede ser demorosa, dependiendo del tamaño del disco y la capacidad del computador.
+
+Si retorna 0, la operación se realizo correctamente. Si retorna 1, ocurrió un error de escritura.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em disk} & El puntero del disco a actualizar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em disk\+\_\+path} & La ruta del disco virtual. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El resultado de la operación. 
+\end{DoxyReturn}

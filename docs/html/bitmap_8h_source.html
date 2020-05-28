@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Cristian Ruz File System: Fichero Fuente src/fileSystem/bitmap.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Cristian Ruz File System
+   </div>
+   <div id="projectbrief">Proyecto 1 - Sistemas Operativos y Redes</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_63fde36204e32b08dfdf7d1cf2e83767.html">fileSystem</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">bitmap.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="bitmap_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structbitmap__block.html">   19</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structbitmap__block.html">bitmap_block</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structbitmap__block.html#a60a34315f460179939054acaf3ed8163">   23</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structbitmap__block.html#a60a34315f460179939054acaf3ed8163">uid</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structbitmap__block.html#a8fef0c04bfabe0802823a1472a054155">   26</a></span>&#160;    <span class="keywordtype">int</span> *<a class="code" href="structbitmap__block.html#a8fef0c04bfabe0802823a1472a054155">bits</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structbitmap__block.html#aeaea1bd83433f49ec9d96024e03ddbc9">   29</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structbitmap__block.html#aeaea1bd83433f49ec9d96024e03ddbc9">count_busy</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structbitmap__block.html#a41280315ea6c2f8a3a93ace9cc74d2fa">   32</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structbitmap__block.html#a41280315ea6c2f8a3a93ace9cc74d2fa">count_free</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="bitmap_8h.html#ab958f885f250e4b41b61f90d28bc7f8c">   35</a></span>&#160;} <a class="code" href="bitmap_8h.html#ab958f885f250e4b41b61f90d28bc7f8c">BitmapBlock</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// Declaramos las funciones asociadas</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="bitmap_8h.html#a6ed97b8ef9d36331513a2d3a8ab308fe">   53</a></span>&#160;<a class="code" href="structbitmap__block.html">BitmapBlock</a> *<a class="code" href="bitmap_8h.html#a6ed97b8ef9d36331513a2d3a8ab308fe">init_bitmap</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *block, <span class="keywordtype">int</span> uid);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="bitmap_8h.html#ad7107d6ebd6b9b6a562f984cd5bfd4a5">   65</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *<a class="code" href="bitmap_8h.html#ad7107d6ebd6b9b6a562f984cd5bfd4a5">unload_bitmap</a>(<a class="code" href="structbitmap__block.html">BitmapBlock</a> *bitmap);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="bitmap_8h.html#a851248fc8f1a175d35de569d76883d78">   76</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="bitmap_8h.html#a851248fc8f1a175d35de569d76883d78">free_bitmap</a>(<a class="code" href="structbitmap__block.html">BitmapBlock</a> *bitmap);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="abitmap_8h_html_ab958f885f250e4b41b61f90d28bc7f8c"><div class="ttname"><a href="bitmap_8h.html#ab958f885f250e4b41b61f90d28bc7f8c">BitmapBlock</a></div><div class="ttdeci">struct bitmap_block BitmapBlock</div><div class="ttdoc">Representación de un bloque bitmap.</div></div>
+<div class="ttc" id="astructbitmap__block_html"><div class="ttname"><a href="structbitmap__block.html">bitmap_block</a></div><div class="ttdoc">Representación de un bloque bitmap.</div><div class="ttdef"><b>Definition:</b> bitmap.h:20</div></div>
+<div class="ttc" id="astructbitmap__block_html_a60a34315f460179939054acaf3ed8163"><div class="ttname"><a href="structbitmap__block.html#a60a34315f460179939054acaf3ed8163">bitmap_block::uid</a></div><div class="ttdeci">int uid</div><div class="ttdef"><b>Definition:</b> bitmap.h:23</div></div>
+<div class="ttc" id="abitmap_8h_html_ad7107d6ebd6b9b6a562f984cd5bfd4a5"><div class="ttname"><a href="bitmap_8h.html#ad7107d6ebd6b9b6a562f984cd5bfd4a5">unload_bitmap</a></div><div class="ttdeci">unsigned char * unload_bitmap(BitmapBlock *bitmap)</div><div class="ttdoc">Función para convertir un bloque bitmap a binario.</div></div>
+<div class="ttc" id="abitmap_8h_html_a851248fc8f1a175d35de569d76883d78"><div class="ttname"><a href="bitmap_8h.html#a851248fc8f1a175d35de569d76883d78">free_bitmap</a></div><div class="ttdeci">void free_bitmap(BitmapBlock *bitmap)</div><div class="ttdoc">Función para liberar un bloque de bitmap.</div></div>
+<div class="ttc" id="astructbitmap__block_html_aeaea1bd83433f49ec9d96024e03ddbc9"><div class="ttname"><a href="structbitmap__block.html#aeaea1bd83433f49ec9d96024e03ddbc9">bitmap_block::count_busy</a></div><div class="ttdeci">int count_busy</div><div class="ttdef"><b>Definition:</b> bitmap.h:29</div></div>
+<div class="ttc" id="abitmap_8h_html_a6ed97b8ef9d36331513a2d3a8ab308fe"><div class="ttname"><a href="bitmap_8h.html#a6ed97b8ef9d36331513a2d3a8ab308fe">init_bitmap</a></div><div class="ttdeci">BitmapBlock * init_bitmap(unsigned char *block, int uid)</div><div class="ttdoc">Función para instanciar un bloque de bitmap.</div></div>
+<div class="ttc" id="astructbitmap__block_html_a41280315ea6c2f8a3a93ace9cc74d2fa"><div class="ttname"><a href="structbitmap__block.html#a41280315ea6c2f8a3a93ace9cc74d2fa">bitmap_block::count_free</a></div><div class="ttdeci">int count_free</div><div class="ttdef"><b>Definition:</b> bitmap.h:32</div></div>
+<div class="ttc" id="astructbitmap__block_html_a8fef0c04bfabe0802823a1472a054155"><div class="ttname"><a href="structbitmap__block.html#a8fef0c04bfabe0802823a1472a054155">bitmap_block::bits</a></div><div class="ttdeci">int * bits</div><div class="ttdef"><b>Definition:</b> bitmap.h:26</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>
